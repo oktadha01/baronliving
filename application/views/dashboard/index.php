@@ -85,7 +85,7 @@
                                         </div>
                                         <div class="portfolio-info">
                                             <h4 class="title-project-dash"><?php echo $project->tittle_project; ?></h4>
-                                            <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto_rand->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                            <!-- <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto_rand->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
                                             <a href="<?php echo base_url(); ?>detail/project/<?php echo $tittle; ?>/<?php echo $project->id_project; ?>" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                                         </div>
                                         <div id="icon_drag_mobile"></div>

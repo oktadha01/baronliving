@@ -39,7 +39,7 @@
                                         }
                                         ?>
                                     </div>
-                                    <a href="<?php echo base_url(); ?>detail/project/<?php echo $tittle; ?>" class="stretched-link text-dark">
+                                    <a href="<?php echo base_url(); ?>detail/project/<?php echo $tittle; ?>/<?php echo $project->id_project; ?>" class="stretched-link text-dark">
                                         <h3 class="font-size-title"><?php echo $project->tittle_project; ?></h3>
                                         <p class="desk-port"><?php echo $project->desc_project; ?></p>
                                     </a>

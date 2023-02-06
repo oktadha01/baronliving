@@ -70,7 +70,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-4 portfolio-item" data-aos="zoom-in" data-aos-delay="200">
                                     <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" class=" img-fluid img p-relative" alt="">
                                     <div class="portfolio-info">
-                                        <h4>App 1</h4>
+                                        <!-- <h4>App 1</h4> -->
                                         <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="right-50px glightbox preview-link">
                                             <i class="bi bi-zoom-in"></i>
                                         </a>
