@@ -77,14 +77,14 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	// LOCAL
-	'username' => 'root',
-	'password' => '',
-	'database' => 'bls',
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'bls',
 
 	// ONLINE
-	// 'username' => 'kina3126_bls',
-	// 'password' => 'baron2020',
-	// 'database' => 'kina3126_bls',
+	'username' => 'kina3126_bls',
+	'password' => 'baron2020',
+	'database' => 'kina3126_bls',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

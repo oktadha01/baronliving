@@ -1417,3 +1417,9 @@ footer .footer-cat,
         padding-left: 1em;
     }
 }
+
+.title-project-dash {
+    bottom: 13rem;
+    position: relative;
+    padding-right: 0;
+}

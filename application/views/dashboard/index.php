@@ -79,10 +79,12 @@
                                 if ($query->num_rows() > 0) {
                                     foreach ($query->result() as $foto_rand) {
                                 ?>
+                                        <!-- <div class="" style="height: 100%; width: max-content; min-width: -webkit-fill-available; position: relative;overflow: hidden;"> -->
                                         <div class="" style="height: 100%; width: max-content; min-width: -webkit-fill-available; position: relative;overflow: hidden;">
                                             <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto_rand->foto_service; ?>" class="max-height img img-fluid p-relative" alt="" data-aos="zoom-in" data-aos-delay="300">
                                         </div>
                                         <div class="portfolio-info">
+                                            <h4 class="title-project-dash"><?php echo $project->tittle_project; ?></h4>
                                             <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto_rand->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                             <a href="<?php echo base_url(); ?>detail/project/<?php echo $tittle; ?>/<?php echo $project->id_project; ?>" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                                         </div>

@@ -3,6 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Detail extends CI_Controller
 {
+    public $load;
+    public $m_detail;
+    public $input;
+    public $uri;
+    public $db;
     function __construct()
     {
         parent::__construct();
@@ -23,12 +28,14 @@ class Detail extends CI_Controller
     {
         $tittle = $this->uri->segment(3);
         $id_project = $this->uri->segment(4);
-        $data['_title'] = $tittle;
+        $tittle_project = preg_replace("![^a-z0-9]+!i", " ", $tittle);
+
+        $data['_title'] = $tittle_project;
         $data['_script'] = 'detail/detail_js';
         $data['_view'] = 'detail/detail_project';
-        $data['detail_project'] = $this->m_detail->m_detail_project($id_project);
+        $data['detail_project'] = $this->m_detail->m_detail_project($tittle_project);
         $this->load->view('layout/index', $data);
-        
+
         $sql = "SELECT * FROM project_service WHERE id_project = $id_project ";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) {
