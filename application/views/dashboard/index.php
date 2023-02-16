@@ -19,9 +19,11 @@
 
             <div class="section-header">
                 <span><span class="font-auto size-50px">A</span><span class="font-auto size-30px">bout us</span></span>
-                <p class="font-desk-service font-initial text-dark">We are a professional contractor engaged in the manufacture of custom furniture and interiors
-                    for homes, offices, apartments, restaurants. Experienced and ready to make your dream home come true.
-                    Our commitment is to provide the best service for international class interiors at affordable prices.
+                <p class="font-desk-service font-initial text-dark">
+                    Baron Living Studio adalah teman yang membantu mewujudkan rumah impian bagi setiap orang.  
+                    Memiliki komitmen dalam merenovasi rumah dengan cepat dan sesuai target. 
+                    Misi kami adalah menjadi pusat ritel perlengkapan rumah dengan berbagai visualisasi pilihan 
+                    untuk menciptakan produk berkualitas tinggi dengan harga terjangkau.
                 </p>
             </div>
 
@@ -54,10 +56,7 @@
                         ?>
                         <h4 class="font-title-service"><?php echo $data->tittle_service; ?></h4>
                         <p class="font-desk-service font-initial" style="text-indent: 22px;">
-                            The house is set in a plot with a long-wide ratio of 6 to 1, which emerges from rocks bathed by the sea.
-                            This two-story house plus basement has been built in an area of consolidated constructions The extreme proportion
-                            of the site together with the fact that the views are towards the north, have been the main conditions of the project.
-                            A 47 meters long dry stone wall is the backbone of the house.
+                            <?php echo $data->desc; ?>
                         </p>
                     </span>
                 </div>
