@@ -16,7 +16,7 @@
             <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#about">About</a></li>
             <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#services">Services</a></li>
             <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#portfolio">Portfolio</a></li>
-            <li><a class="nav-link scrollto" href="<?php echo base_url('Artikel'); ?>">Artikel</a></li>
+            <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#Artikel">Artikel</a></li>
             <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#contact">Contact</a></li>
          </ul>
          <i class="bi bi-list mobile-nav-toggle d-none"></i>

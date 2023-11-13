@@ -204,7 +204,7 @@
 
                 <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center" data-aos="fade-left">
                     <div class="img">
-                        <img src="assets/img/cta.jpg" alt="" class="img-fluid">
+                        <img src="assets/img/20231106-TMA06483.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
 
@@ -425,7 +425,7 @@
         </div>
     </section><!-- End Services Section -->
     <!-- ======= artikel Section ======= -->
-    <section id="artikel" class="recent-blog-posts pt-0">
+    <section id="Artikel" class="recent-blog-posts pt-0">
 
         <div class="container aos-init aos-animate" data-aos="fade-up">
 
@@ -437,17 +437,19 @@
             <div class="row">
                 <?php
                 foreach ($data_artikel as $data) :
+                    $judul_berita = $data->judul_berita;
+                    $tittle_news = preg_replace("![^a-z0-9]+!i", "-", $judul_berita);
                 ?>
                     <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                         <div class="post-box">
-                            <div class="post-img"><img src="<?= base_url('upload '); ?>/<?= $data->foto_berita; ?>" class="img-fluid" alt=""></div>
+                            <div class="post-img"><img src="<?= base_url('upload'); ?>/<?= $data->foto_berita; ?>" class="img-fluid" alt=""></div>
                             <div class="meta">
                                 <span class="post-date"><?= $data->tgl_berita; ?></span>
-                                <!-- <span class="post-author"> / Julia Parker</span> -->
+                                <span class="post-author"style="float: right;"><?= $data->view_berita; ?> <i class="bi bi-eye"></i></span>
                             </div>
                             <h3 class="post-title"><?= $data->judul_berita; ?></h3>
                             <!-- <p>Illum voluptas ab enim placeat. Adipisci enim velit nulla. Vel omnis laudantium. Asperiores eum ipsa est officiis. Modi cupiditate exercitationem qui magni est...</p> -->
-                            <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                            <a href="<?= base_url('Artikel/page/') . $tittle_news; ?>" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -455,7 +457,7 @@
             <div class="row">
                 <div class="col-12">
                     <center>
-                        <a href="#" style="border: 1px solid;padding: 12px;border-radius: 11px;">Lihat Artikel Lainnya >></a>
+                        <a href="<?php echo base_url('Artikel'); ?>" style="border: 1px solid;padding: 12px;border-radius: 11px;">Lihat Artikel Lainnya >></a>
                     </center>
                 </div>
             </div>
