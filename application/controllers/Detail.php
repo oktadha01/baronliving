@@ -16,7 +16,8 @@ class Detail extends CI_Controller
 
     function data()
     {
-        $tittle = $this->uri->segment(3);
+        $tittle_service = $this->uri->segment(3);
+        $tittle = preg_replace("![^a-z0-9]+!i", " ", $tittle_service);
 
         $data['_title'] = $tittle;
         $data['_script'] = 'detail/detail_js';
@@ -26,26 +27,29 @@ class Detail extends CI_Controller
     }
     function project()
     {
-        $tittle = $this->uri->segment(3);
-        $id_project = $this->uri->segment(4);
+        $tittle_service = $this->uri->segment(3);
+        $tittle = $this->uri->segment(4);
         $tittle_project = preg_replace("![^a-z0-9]+!i", " ", $tittle);
+        $service = preg_replace("![^a-z0-9]+!i", " ", $tittle_service);
 
         $data['_title'] = $tittle_project;
         $data['_script'] = 'detail/detail_js';
         $data['_view'] = 'detail/detail_project';
-        $data['detail_project'] = $this->m_detail->m_detail_project($tittle_project);
+        $data['service'] = $this->m_detail->m_service($tittle_project);
+        $data['detail_project'] = $this->m_detail->m_detail_project($tittle_project, $service);
+        $data['foto_project'] = $this->m_detail->m_foto_project($tittle_project, $service);
         $this->load->view('layout/index', $data);
 
-        $sql = "SELECT * FROM project_service WHERE id_project = $id_project ";
-        $query = $this->db->query($sql);
-        if ($query->num_rows() > 0) {
-            foreach ($query->result() as $project) {
-                $add_view = $project->view + 1;
-            }
-        }
-        $update_view = $this->db->set('view', $add_view)
-            ->where('id_project', $id_project)
-            ->update('project_service');
-        return $update_view;
+        // $sql = "SELECT * FROM project_service WHERE id_project = $id_project ";
+        // $query = $this->db->query($sql);
+        // if ($query->num_rows() > 0) {
+        //     foreach ($query->result() as $project) {
+        //         $add_view = $project->view + 1;
+        //     }
+        // }
+        // $update_view = $this->db->set('view', $add_view)
+        //     ->where('id_project', $id_project)
+        //     ->update('project_service');
+        // return $update_view;
     }
 }

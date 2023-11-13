@@ -16,13 +16,13 @@
                 <hr>
                 <div class="row gy-1">
                     <?php
-                    $sql = "SELECT * FROM project_service WHERE project_service.id_service_project = '$id_service'";
+                    $sql = "SELECT * FROM project_service, project WHERE project.project_id = project_service.tittle_project AND project_service.id_service_project = '$id_service'";
                     $query = $this->db->query($sql);
                     if ($query->num_rows() > 0) {
                         foreach ($query->result() as $project) {
                             $id_project = $project->id_project;
-                            $tittle_project = $project->tittle_project;
-                            $tittle = preg_replace("![^a-z0-9]+!i", "-", $tittle_project);
+                            $nm_project = $project->nm_project;
+                            $tittle = preg_replace("![^a-z0-9]+!i", "-", $nm_project);
                     ?>
                             <div class="col-lg-3 col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="service-item">
@@ -33,13 +33,13 @@
                                         if ($query->num_rows() > 0) {
                                             foreach ($query->result() as $foto) {
                                         ?>
-                                                <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" class=" size-img-dash img-fluid" alt="">
+                                                <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" class="img-fluid" alt="">
                                         <?php
                                             }
                                         }
                                         ?>
                                     </div>
-                                    <a href="<?php echo base_url(); ?>detail/project/<?php echo $tittle; ?>/<?php echo $project->id_project; ?>" class="stretched-link text-dark">
+                                    <a href="<?php echo base_url(); ?>detail/project/<?= $this->uri->segment(3); ?>/<?php echo $tittle; ?>/<?php echo $project->id_project; ?>" class="stretched-link text-dark">
                                         <h3 class="font-size-title"><?php echo $project->tittle_project; ?></h3>
                                         <p class="desk-port"><?php echo $project->desc_project; ?></p>
                                     </a>

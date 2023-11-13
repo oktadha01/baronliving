@@ -37,7 +37,7 @@
     $('#btn-save-project').click(function() {
         let formData = new FormData();
         formData.append('id-service', $('#id-service').val());
-        formData.append('tittle-project', $('#tittle-project').val());
+        formData.append('tittle-project', $('#select-project').val());
         formData.append('desc-project', $('#desc-project').val());
 
         $.ajax({
@@ -63,6 +63,38 @@
         $('#btn-add-project').show();
     });
 
+
+    $("#btn-save-add-project").click(function() {
+        let formData = new FormData();
+        formData.append('nm-project', $('#nm-project').val());
+
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo site_url('Service/save_add_project'); ?>",
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function(data) {
+                load_select_project();
+
+            },
+            error: function() {
+                alert("Data Gagal Diupload");
+            }
+        });
+    })
+
+    $('.add-project').hide();
+    $('#select-project').change(function() {
+        alert($(this).val());
+        if ($(this).val() == 'add') {
+            $('.add-project').show();
+        } else {
+            $('.add-project').hide();
+        }
+    })
+
     function load_data_project() {
         let formData = new FormData();
         formData.append('id-service', $('#id-service').val());
@@ -76,6 +108,31 @@
             contentType: false,
             success: function(data) {
                 $('#data-service-project').html(data);
+                load_select_project()
+                $("#select-project").select2({
+                    placeholder: "Pilih Project",
+                    allowClear: true
+                });
+            },
+            error: function() {
+                alert("Data Gagal Diupload");
+            }
+        });
+    }
+
+    function load_select_project() {
+        // let formData = new FormData();
+        // formData.append('id-service', $('#id-service').val());
+
+        $.ajax({
+            // type: 'POST',
+            url: "<?php echo site_url('Service/select_project'); ?>",
+            // data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function(data) {
+                $('#select-project').html(data);
             },
             error: function() {
                 alert("Data Gagal Diupload");

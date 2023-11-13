@@ -11,27 +11,33 @@ class Service extends CI_Controller
 
     function data()
     {
-        $tittle = $this->uri->segment(3);
-        if ($tittle == 'architec') {
-
-            $data['_title'] = $tittle;
-            $data['_script'] = 'service/service_js';
-            $data['_view'] = 'service/service';
-            $data['data_service'] = $this->m_service->m_data_service($tittle);
-            $this->load->view('layout/index', $data);
-        } else if ($tittle == 'contraction') {
-            $data['_title'] = $tittle;
-            $data['_script'] = 'service/service_js';
-            $data['_view'] = 'service/service';
-            $data['data_service'] = $this->m_service->m_data_service($tittle);
-            $this->load->view('layout/index', $data);
-        } else if ($tittle == 'furniture') {
-            $data['_title'] = $tittle;
-            $data['_script'] = 'service/service_js';
-            $data['_view'] = 'service/service';
-            $data['data_service'] = $this->m_service->m_data_service($tittle);
-            $this->load->view('layout/index', $data);
+        $tittle_service = $this->uri->segment(3);
+        $tittle = preg_replace("![^a-z0-9]+!i", " ", $tittle_service);
+        $data['_title'] = $tittle;
+        $data['_script'] = 'service/service_js';
+        $data['_view'] = 'service/service';
+        $data['data_service'] = $this->m_service->m_data_service($tittle);
+        $this->load->view('layout/index', $data);
+       
+    }
+    function select_project()
+    {
+        echo '<option value=""></option>
+                <option value="add">Tambah Project</option>';
+        $data['select_project'] = $this->m_service->m_select_project();
+        foreach ($data['select_project'] as $project) {
+            echo '<option value="' . $project->project_id . '">' . $project->nm_project . '</option>';
         }
+    }
+
+    function save_add_project()
+    {
+        $nm_project = $this->input->post('nm-project');
+        $data = [
+            'nm_project' => $nm_project
+        ];
+        $insert = $this->m_service->m_save_add_project($data);
+        echo json_encode($insert);
     }
 
     function data_foto_architec()
@@ -46,7 +52,7 @@ class Service extends CI_Controller
     {
         $id_service = $this->input->post('id-service');
 
-        $data['data_service_project'] = $this->m_service->m_data_project_service($id_service);
+        $data['data_service_project'] = $this->m_service->m_data_service_project($id_service);
         $data['_view'] = 'service/data_service_project';
         $this->load->view('service/data_service_project', $data);
     }
@@ -71,9 +77,10 @@ class Service extends CI_Controller
     {
 
         $id_project = $this->input->post('id-project');
+        $project_id = $this->input->post('project-id');
         $tittle_project = $this->input->post('tittle-project');
         $desc_project = $this->input->post('desc-project');
-        $update = $this->m_service->m_edit_project($id_project, $tittle_project, $desc_project);
+        $update = $this->m_service->m_edit_project($id_project, $project_id, $tittle_project, $desc_project);
         echo json_encode($update);
     }
 
@@ -157,8 +164,8 @@ class Service extends CI_Controller
             'new_image' => $target_path,
             'maintain_ratio' => TRUE,
             'quality' => '50%',
-            'width' => 'auto',
-            'height' => '2560',
+            'width' => '1440',
+            'height' => 'auto',
         ];
         $this->load->library('image_lib', $config);
         if (!$this->image_lib->resize()) {

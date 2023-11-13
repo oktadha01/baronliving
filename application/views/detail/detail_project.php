@@ -1,154 +1,121 @@
+<style>
+    .portfolio-details .portfolio-details-slider img {
+        width: 100%;
+        border-radius: 20px;
+    }
+</style>
 <main id="main" class="mt-4">
     <section id="" class="portfolio" data-aos="fade-up">
-        <?php
-        foreach ($detail_project as $data) :
-            $id_project = $data->id_project;
-        ?>
+        <div class="breadcrumbs mt-3">
             <div class="container">
 
-                <div class="section-header">
-                    <h2 class="font-auto"><?php echo $data->tittle_project; ?></h2>
-                    <p class="font-desk-service font-initial text-dark">Non hic nulla eum consequatur maxime ut vero memo vero totam officiis pariatur eos dolorum sed fug dolorem est possimus esse quae repudiandae. Dolorem id enim officiis sunt deserunt esse soluta consequatur quaerat</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2><?= $this->uri->segment(4); ?></h2>
+                    <ol>
+                        <?php
+                        foreach ($service as $data) :
+                            $tittle_service = $data->tittle_service;
+                            $tittle = preg_replace("![^a-z0-9]+!i", "-", $tittle_service);
+                        ?>
+                            <li><a href="<?php echo base_url(); ?>detail/project/<?= $tittle; ?>/<?= $this->uri->segment(4); ?>"><?= $data->tittle_service; ?></a></li>
+                        <?php
+                        endforeach;
+                        ?>
+                        <li><a href="<?php echo base_url(); ?>detail/project/all/<?= $this->uri->segment(4); ?>">ALL</a></li>
+                    </ol>
                 </div>
 
             </div>
+        </div>
 
-            <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
 
-                <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
 
-                    <div class="row g-0 portfolio-container">
-                        <!-- LANDSCAPE -->
-                        <?php
-                        $sql = "SELECT * FROM foto WHERE id_foto_service = '$id_project' AND orientasi_foto='landscape' ORDER BY RAND() limit 1";
-                        $query = $this->db->query($sql);
-                        if ($query->num_rows() > 0) {
-                            foreach ($query->result() as $foto) {
-                        ?>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-4 portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" class=" img-fluid img p-relative" alt="">
-                                    <div class="portfolio-info">
-                                        <!-- <h4>App 1</h4> -->
-                                        <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="right-50px glightbox preview-link">
-                                            <i class="bi bi-zoom-in"></i>
-                                        </a>
-                                    </div>
-                                    <div id="icon_drag_mobile"></div>
-                                </div>
-                        <?php
-                            }
-                        }
-                        ?>
-                        <!-- PORTRAIT -->
-                        <?php
-                        $sql = "SELECT * FROM foto WHERE id_foto_service = '$id_project' AND orientasi_foto='portrait' ORDER BY RAND() limit 1";
-                        $query = $this->db->query($sql);
-                        if ($query->num_rows() > 0) {
-                            foreach ($query->result() as $foto) {
-                        ?>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-4 portfolio-item max-col-portrait" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" class=" img-fluid img p-relative" alt="">
-                                    <div class="portfolio-info">
-                                        <!-- <h4>App 1</h4> -->
-                                        <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="right-50px glightbox preview-link">
-                                            <i class="bi bi-zoom-in"></i>
-                                        </a>
-                                    </div>
-                                    <div id="icon_drag_mobile"></div>
-                                </div>
-                        <?php
-                            }
-                        }
-                        ?>
-                        <!-- LANDSCAPE -->
-                        <?php
-                        $sql = "SELECT * FROM foto WHERE id_foto_service = '$id_project' AND orientasi_foto='landscape' ORDER BY RAND() limit 1";
-                        $query = $this->db->query($sql);
-                        if ($query->num_rows() > 0) {
-                            foreach ($query->result() as $foto) {
-                        ?>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-4 portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" class=" img-fluid img p-relative" alt="">
-                                    <div class="portfolio-info">
-                                        <!-- <h4>App 1</h4> -->
-                                        <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="right-50px glightbox preview-link">
-                                            <i class="bi bi-zoom-in"></i>
-                                        </a>
-                                    </div>
-                                    <div id="icon_drag_mobile"></div>
-                                </div>
-                        <?php
-                            }
-                        }
-                        ?>
-                        <!-- PORTRAIT -->
-                        <?php
-                        $sql = "SELECT * FROM foto WHERE id_foto_service = '$id_project' AND orientasi_foto='portrait' ORDER BY RAND() limit 1";
-                        $query = $this->db->query($sql);
-                        if ($query->num_rows() > 0) {
-                            foreach ($query->result() as $foto) {
-                        ?>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-4 portfolio-item max-col-portrait" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" class=" img-fluid img p-relative" alt="">
-                                    <div class="portfolio-info">
-                                        <!-- <h4>App 1</h4> -->
-                                        <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="right-50px glightbox preview-link">
-                                            <i class="bi bi-zoom-in"></i>
-                                        </a>
-                                    </div>
-                                    <div id="icon_drag_mobile"></div>
-                                </div>
-                        <?php
-                            }
-                        }
-                        ?>
-                        <!-- PORTRAIT -->
-                        <?php
-                        $sql = "SELECT * FROM foto WHERE id_foto_service = '$id_project' AND orientasi_foto='portrait' ORDER BY RAND() limit 1";
-                        $query = $this->db->query($sql);
-                        if ($query->num_rows() > 0) {
-                            foreach ($query->result() as $foto) {
-                        ?>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-4 portfolio-item max-col-portrait" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" class=" img-fluid img p-relative" alt="">
-                                    <div class="portfolio-info">
-                                        <!-- <h4>App 1</h4> -->
-                                        <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="right-50px glightbox preview-link">
-                                            <i class="bi bi-zoom-in"></i>
-                                        </a>
-                                    </div>
-                                    <div id="icon_drag_mobile"></div>
-                                </div>
-                        <?php
-                            }
-                        }
-                        ?>
-                        <!-- LANDSCAPE -->
-                        <?php
-                        $sql = "SELECT * FROM foto WHERE id_foto_service = '$id_project' AND orientasi_foto='landscape' ORDER BY RAND() limit 1";
-                        $query = $this->db->query($sql);
-                        if ($query->num_rows() > 0) {
-                            foreach ($query->result() as $foto) {
-                        ?>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-4 portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                                    <img src="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" class=" img-fluid img p-relative" alt="">
-                                    <div class="portfolio-info">
-                                        <!-- <h4>App 1</h4> -->
-                                        <a href="<?php echo base_url('upload'); ?>/service/<?php echo $foto->foto_service; ?>" title="App 1" data-gallery="portfolio-gallery" class="right-50px glightbox preview-link">
-                                            <i class="bi bi-zoom-in"></i>
-                                        </a>
-                                    </div>
-                                    <div id="icon_drag_mobile"></div>
-                                </div>
-                        <?php
-                            }
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
         <?php
-        endforeach;
+        foreach ($detail_project as $row) {
+            $idservice = $row->id_service;
+        ?>
+            <section id="portfolio-details" class="portfolio-details pb-0">
+                <div class="container aos-init aos-animate" data-aos="fade-up">
+                    <div class="row gy-4">
+                        <div class="col-lg-8">
+                            <div class="portfolio-details-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                                <div class="swiper-wrapper align-items-center" id="swiper-wrapper-aabe2730f2cdf199" aria-live="off" style="transform: translate3d(-4415.93px, 0px, 0px); transition-duration: 0ms;">
+                                    <?php
+                                    $no = 0;
+                                    foreach ($foto_project as $data) {
+
+
+                                    ?>
+                                        <?php
+                                        if ($data->id_service == $idservice) {
+                                        ?>
+                                            <div class="swiper-slide" data-swiper-slide-index="<?= $no++; ?>" role="group">
+                                                <img src="<?= base_url('upload'); ?>\service\<?= $data->foto_service; ?>" alt="">
+                                            </div>
+                                        <?php
+                                        }
+                                        ?>
+
+                                    <?php
+                                    } ?>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+
+                                </div>
+                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="portfolio-info">
+                                <!-- <h3>Project information</h3> -->
+                                <h2><?= $row->tittle_service; ?></h2>
+                                <hr>
+                                <!-- <ul>
+                                    <li><strong>Category</strong>: Web design</li>
+                                    <li><strong>Client</strong>: ASU Company</li>
+                                    <li><strong>Project date</strong>: 01 March, 2020</li>
+                                    <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                                </ul> -->
+                                <p>
+                                    <?= $data->desc_project; ?>
+                                </p>
+                            </div>
+                            <div class="portfolio-description">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+        <?php
+        }
         ?>
     </section>
 </main>
+<!-- <div class="container gallery__content--flow">
+
+                <figure>
+                    <img src="<?= base_url('upload'); ?>\service\005fa1db0a08acd9e97dd548bac12266.jpg" class="img-grid-news" alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. " title="Photo by Giacomo Lucarini for Unsplash">
+                    <figcaption class="header__caption" role="presentation">
+                        <h2 class="title title--secondary">
+                            <button type="button" id="" data-id-foto-berita="<?php echo $foto->id_foto_berita; ?>" data-file-foto-berita="<?php echo $foto->file_foto_berita; ?>" class="btn-hapus-foto-berita-other browse btn btn-danger">Hapus Foto</button>
+                        </h2>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="<?= base_url('upload'); ?>\service\005fa1db0a08acd9e97dd548bac12266.jpg" class="img-grid-news" alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. " title="Photo by Giacomo Lucarini for Unsplash">
+                    <figcaption class="header__caption" role="presentation">
+                        <h2 class="title title--secondary">
+                            <button type="button" id="" data-id-foto-berita="<?php echo $foto->id_foto_berita; ?>" data-file-foto-berita="<?php echo $foto->file_foto_berita; ?>" class="btn-hapus-foto-berita-other browse btn btn-danger">Hapus Foto</button>
+                        </h2>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="<?= base_url('upload'); ?>\service\005fa1db0a08acd9e97dd548bac12266.jpg" class="img-grid-news" alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. " title="Photo by Giacomo Lucarini for Unsplash">
+                    <figcaption class="header__caption" role="presentation">
+                        <h2 class="title title--secondary">
+                            <button type="button" id="" data-id-foto-berita="<?php echo $foto->id_foto_berita; ?>" data-file-foto-berita="<?php echo $foto->file_foto_berita; ?>" class="btn-hapus-foto-berita-other browse btn btn-danger">Hapus Foto</button>
+                        </h2>
+                    </figcaption>
+                </figure>
+            </div> -->

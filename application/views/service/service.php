@@ -30,10 +30,22 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-4 col-12">
                         <label class="desk" for="">Project</label>
                         <div class="form-group mt-2">
-                            <input type="text" id="tittle-project" class="form-control" name="tittle_project" required>
+                            <select id="select-project" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 add-project">
+                        <label class="" for="">Project</label>
+                        <div class="form-group mt-2">
+                            <input type="text" id="nm-project" class="form-control" name="tittle_project" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 add-project">
+                        <div style="margin-top: 2rem;">
+                            <button type="button" id="btn-save-add-project" class=" btn btn-md btn-outline-primary" data-id-project=""><i class="fa-solid fa-cloud-arrow-up"></i> Save Project</button>
                         </div>
                     </div>
                     <div class="col-12">
@@ -47,7 +59,7 @@
         </div>
         <div class="row mt-2">
             <div class="col-6">
-                <button type="button" id="btn-cencel-add-project" class=" btn btn-sm btn-outline-danger" data-id-project="" hidden><i class="fa-regular fa-rectangle-xmark"></i> Cencel</button>
+                <button type="button" id="btnSave Project-add-project" class=" btn btn-sm btn-outline-danger" data-id-project="" hidden><i class="fa-regular fa-rectangle-xmark"></i> Cencel</button>
             </div>
             <div class="col-6">
                 <button type="button" id="btn-add-project" class=" btn btn-sm float-right btn-outline-primary" data-id-project=""><i class="fa-solid fa-diagram-project"></i> Add Project</button>
