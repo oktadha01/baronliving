@@ -172,7 +172,7 @@ class Service extends CI_Controller
     }
     function load_foto_meta_service()
     {
-        echo '<input type="file" id="foto-meta-service" name="foto" class="file-foto" hidden>';
+        echo '<input type="file" id="foto-meta-service" name="foto" class="" hidden>';
         $id_project = $this->input->post('id-project');
         $data['foto_meta'] = $this->m_service->m_load_foto_meta_service($id_project);
         foreach ($data['foto_meta'] as $row) :
