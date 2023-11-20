@@ -318,12 +318,15 @@
                             $tittle = preg_replace("![^a-z0-9]+!i", "-", $nm_project);
                         ?>
                             <div class="row" data-aos="fade-down">
-                                <div class="col-12 img-col12">
-                                    <img src="<?= base_url('upload'); ?>\service\<?= $rows->foto_service; ?>" class="img-fluid" style="position: relative; bottom: 50%;">
-                                </div>
-                                <div style="position: relative;">
-                                    <span class="text-pos size-col12">Arsitektur <?= $rows->nm_project; ?></span>
-                                </div>
+                                <a href="<?php echo base_url(); ?>detail/project/Arsitektur/<?php echo $tittle; ?>">
+
+                                    <div class="col-12 img-col12">
+                                        <img src="<?= base_url('upload'); ?>\service\<?= $rows->foto_service; ?>" class="img-fluid" style="position: relative; bottom: 50%;">
+                                    </div>
+                                    <div style="position: relative;">
+                                        <h1 class="text-pos size-col12">Arsitektur <?= $rows->nm_project; ?></h1>
+                                    </div>
+                                </a>
                             </div>
                         <?php
                         }
@@ -346,15 +349,18 @@
                                 $nm_project = $rows->nm_project;
                                 $tittle = preg_replace("![^a-z0-9]+!i", "-", $nm_project);
                             ?>
-                                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-right" style="padding-left:0 ;">
-                                    <div class="img-col6">
-                                        <img src="<?= base_url('upload'); ?>\service/<?= $rows->foto_service; ?>" class="img-fluid">
-                                    </div>
-                                    <div style="position: relative;">
-                                        <span class="text-pos size-col12">Interior <?= $rows->nm_project; ?></span>
+                                <a href="<?php echo base_url(); ?>detail/project/Desain-Interior/<?php echo $tittle; ?>">
 
+                                    <div class="col-lg-6 col-md-6 col-12" data-aos="fade-right" style="padding-left:0 ;">
+                                        <div class="img-col6">
+                                            <img src="<?= base_url('upload'); ?>\service/<?= $rows->foto_service; ?>" class="img-fluid">
+                                        </div>
+                                        <div style="position: relative;">
+                                            <h1 class="text-pos size-col12">Interior <?= $rows->nm_project; ?></h1>
+
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             <?php
                             }
                             ?>
@@ -371,14 +377,16 @@
                                 $nm_project = $rows->nm_project;
                                 $tittle = preg_replace("![^a-z0-9]+!i", "-", $nm_project);
                             ?>
-                                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-left" style="padding-right:0 ;">
-                                    <div class="img-col6">
-                                        <img src="<?= base_url('upload'); ?>\service\<?= $rows->foto_service; ?>" class="img-fluid">
+                                <a href="<?php echo base_url(); ?>detail/project/Custom-Furnitur/<?php echo $tittle; ?>">
+                                    <div class="col-lg-6 col-md-6 col-12" data-aos="fade-left" style="padding-right:0 ;">
+                                        <div class="img-col6">
+                                            <img src="<?= base_url('upload'); ?>\service\<?= $rows->foto_service; ?>" class="img-fluid">
+                                        </div>
+                                        <div style="position: relative;">
+                                            <h1 class="text-pos size-col6">Furnitur <?= $rows->nm_project; ?></h1>
+                                        </div>
                                     </div>
-                                    <div style="position: relative;">
-                                        <span class="text-pos size-col6">Furnitur <?= $rows->nm_project; ?></span>
-                                    </div>
-                                </div>
+                                </a>
                             <?php
                             }
                             ?>
@@ -401,12 +409,15 @@
                                 $nm_project = $rows->nm_project;
                                 $tittle = preg_replace("![^a-z0-9]+!i", "-", $nm_project);
                             ?>
-                                <div class="col-12 img-col12">
-                                    <img src="<?= base_url('upload'); ?>\service\<?= $rows->foto_service; ?>" class="img-fluid" style="position: relative; bottom: 50%;">
-                                </div>
-                                <div style="position: relative;">
-                                    <span class="text-pos size-col12">Kontraktor <?= $rows->nm_project; ?></span>
-                                </div>
+                                <a href="<?php echo base_url(); ?>detail/Kontraktor/Arsitektur/<?php echo $tittle; ?>">
+
+                                    <div class="col-12 img-col12">
+                                        <img src="<?= base_url('upload'); ?>\service\<?= $rows->foto_service; ?>" class="img-fluid" style="position: relative; bottom: 50%;">
+                                    </div>
+                                    <div style="position: relative;">
+                                        <h1 class="text-pos size-col12">Kontraktor <?= $rows->nm_project; ?></h1>
+                                    </div>
+                                </a>
                             <?php
                             }
                             ?>
@@ -445,7 +456,7 @@
                             <div class="post-img"><img src="<?= base_url('upload'); ?>/<?= $data->foto_berita; ?>" class="img-fluid" alt=""></div>
                             <div class="meta">
                                 <span class="post-date"><?= $data->tgl_berita; ?></span>
-                                <span class="post-author"style="float: right;"><?= $data->view_berita; ?> <i class="bi bi-eye"></i></span>
+                                <span class="post-author" style="float: right;"><?= $data->view_berita; ?> <i class="bi bi-eye"></i></span>
                             </div>
                             <h3 class="post-title"><?= $data->judul_berita; ?></h3>
                             <!-- <p>Illum voluptas ab enim placeat. Adipisci enim velit nulla. Vel omnis laudantium. Asperiores eum ipsa est officiis. Modi cupiditate exercitationem qui magni est...</p> -->
