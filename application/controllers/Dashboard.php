@@ -12,7 +12,7 @@ class Dashboard extends CI_Controller
 	function index()
 	{
 
-		$data['_title'] = 'Baron Living Studio';
+		$data['_title'] = 'Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya';
 		$data['_script'] = 'dashboard/index_js';
 		$data['_view'] = 'dashboard/index';
 		$data['data_service'] = $this->m_dashboard->m_service();

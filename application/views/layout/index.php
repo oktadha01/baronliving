@@ -4,6 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="google-site-verification" content="Da0TUaYScK7AIiQsOyTgtDTpMIBgIFtz3Gb7zkltBB4" /> -->
+    <meta name="google-site-verification" content="7i4MFwx9o5niYM8_5w-uzOuKetBLUFMogGH7c0YpjHY" />
+    <meta name="msvalidate.01" content="B36B1215CB3BC26AA0E6851087FF5E2F" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
     <title>
 
         <?php
@@ -18,7 +24,7 @@
     <?php
     if (isset($_metafoto)) {
     ?>
-        <meta property="og:image" content="<?php echo base_url('upload'); ?>/<?php echo $_metafoto; ?>">
+        <meta property="og:image" content="<?php echo $_metafoto; ?>">
     <?php
     } else {
     }
@@ -27,10 +33,15 @@
     if (isset($_description)) {
     ?>
         <meta name="description" content="<?php echo $_description; ?>">
+        <meta name="keywords"content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
     <?php
     } else {
     ?>
-    <?php } ?>
+        <meta name="description" content="One Stop Solution untuk semua kebutuhan Interiormu, Merencanakan, merancang, melakukan konstruksi, dan custom furnitur Membantumu mewujudkan ruangan yang nyaman, Membantumu mewujudkan ruangan yang nyaman">
+        <meta name="keywords"content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
+        <?php } ?>
+    <meta name="robots" content="INDEX,FOLLOW">
+    
     <style>
         .opacity-body {
             margin-top: 0;
@@ -41,6 +52,7 @@
             background: #0000008c;
         }
     </style>
+
     <!-- Favicons -->
     <link href="<?php echo base_url('assets'); ?>/img/favicon.png" rel="icon">
 
@@ -115,8 +127,8 @@
     <script src="<?php echo base_url('assets'); ?>/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="<?php echo base_url('assets'); ?>/vendor/php-email-form/validate.js"></script>
     <script src="<?php echo base_url('assets'); ?>/js/custom.js"></script>
-    
-    
+
+
     <!-- Template Main JS File -->
     <script src="<?php echo base_url('assets'); ?>/js/main.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
@@ -183,6 +195,18 @@
                 // checks if its the same on the address bar
                 if (url == (this.href)) {
                     $(this).closest(".btn-tag").addClass("tag-active");
+                }
+            });
+            // this will get the full URL at the address bar
+        });
+        $(function() {
+            var url = window.location.href;
+
+            // passes on every "a" tag
+            $("#service a").each(function() {
+                // checks if its the same on the address bar
+                if (url == (this.href)) {
+                    $(this).closest(".btn-service").addClass("service-active");
                 }
             });
             // this will get the full URL at the address bar

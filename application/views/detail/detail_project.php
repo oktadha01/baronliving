@@ -9,7 +9,7 @@
         <div class="breadcrumbs mt-3">
             <div class="container">
 
-                <div class="d-flex justify-content-between align-items-center">
+                <div id="service" class="d-flex justify-content-between align-items-center">
                     <h2><?= $this->uri->segment(4); ?></h2>
                     <ol>
                         <?php
@@ -17,11 +17,11 @@
                             $tittle_service = $data->tittle_service;
                             $tittle = preg_replace("![^a-z0-9]+!i", "-", $tittle_service);
                         ?>
-                            <li><a href="<?php echo base_url(); ?>detail/project/<?= $tittle; ?>/<?= $this->uri->segment(4); ?>"><?= $data->tittle_service; ?></a></li>
+                            <li><a class="btn-service" href="<?php echo base_url(); ?>detail/project/<?= $tittle; ?>/<?= $this->uri->segment(4); ?>"><?= $data->tittle_service; ?></a></li>
                         <?php
                         endforeach;
                         ?>
-                        <li><a href="<?php echo base_url(); ?>detail/project/all/<?= $this->uri->segment(4); ?>">ALL</a></li>
+                        <li><a class="btn-service" href="<?php echo base_url(); ?>detail/project/all/<?= $this->uri->segment(4); ?>">ALL</a></li>
                     </ol>
                 </div>
 
@@ -70,12 +70,6 @@
                                 <!-- <h3>Project information</h3> -->
                                 <h2><?= $row->tittle_service; ?></h2>
                                 <hr>
-                                <!-- <ul>
-                                    <li><strong>Category</strong>: Web design</li>
-                                    <li><strong>Client</strong>: ASU Company</li>
-                                    <li><strong>Project date</strong>: 01 March, 2020</li>
-                                    <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-                                </ul> -->
                                 <p>
                                     <?= $data->desc_project; ?>
                                 </p>
@@ -92,30 +86,3 @@
         ?>
     </section>
 </main>
-<!-- <div class="container gallery__content--flow">
-
-                <figure>
-                    <img src="<?= base_url('upload'); ?>\service\005fa1db0a08acd9e97dd548bac12266.jpg" class="img-grid-news" alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. " title="Photo by Giacomo Lucarini for Unsplash">
-                    <figcaption class="header__caption" role="presentation">
-                        <h2 class="title title--secondary">
-                            <button type="button" id="" data-id-foto-berita="<?php echo $foto->id_foto_berita; ?>" data-file-foto-berita="<?php echo $foto->file_foto_berita; ?>" class="btn-hapus-foto-berita-other browse btn btn-danger">Hapus Foto</button>
-                        </h2>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="<?= base_url('upload'); ?>\service\005fa1db0a08acd9e97dd548bac12266.jpg" class="img-grid-news" alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. " title="Photo by Giacomo Lucarini for Unsplash">
-                    <figcaption class="header__caption" role="presentation">
-                        <h2 class="title title--secondary">
-                            <button type="button" id="" data-id-foto-berita="<?php echo $foto->id_foto_berita; ?>" data-file-foto-berita="<?php echo $foto->file_foto_berita; ?>" class="btn-hapus-foto-berita-other browse btn btn-danger">Hapus Foto</button>
-                        </h2>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="<?= base_url('upload'); ?>\service\005fa1db0a08acd9e97dd548bac12266.jpg" class="img-grid-news" alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. " title="Photo by Giacomo Lucarini for Unsplash">
-                    <figcaption class="header__caption" role="presentation">
-                        <h2 class="title title--secondary">
-                            <button type="button" id="" data-id-foto-berita="<?php echo $foto->id_foto_berita; ?>" data-file-foto-berita="<?php echo $foto->file_foto_berita; ?>" class="btn-hapus-foto-berita-other browse btn btn-danger">Hapus Foto</button>
-                        </h2>
-                    </figcaption>
-                </figure>
-            </div> -->

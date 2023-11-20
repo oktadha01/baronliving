@@ -28,16 +28,15 @@ class M_service extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
-    function m_data_service_project($id_service)
+    function m_load_foto_meta_service($id_project)
     {
         $this->db->select('*');
-        $this->db->from('project');
-        $this->db->join('project_service', 'project_service.tittle_project = project.project_id');
-        $this->db->where('id_service_project', $id_service);
-        $this->db->order_by('id_project', 'desc');
+        $this->db->from('project_service');
+        $this->db->where('id_project', $id_project);
         $query = $this->db->get();
         return $query->result();
     }
+  
 
     function m_save_add_project($data)
     {
@@ -103,11 +102,31 @@ class M_service extends CI_Model
             ->update('foto');
         return $update;
     }
-
+    
     function m_hapus_foto_service($id_foto)
     {
         $delete_foto = $this->db->where('id_foto', $id_foto)
             ->delete('foto');
-        return $delete_foto;
+            return $delete_foto;
+    }
+    
+    function m_upload_foto_meta_service($id_project, $foto_meta_service)
+    {
+        
+        $update = $this->db->set('foto_meta_service', $foto_meta_service)
+            ->where('id_project', $id_project)
+            ->update('project_service');
+        return $update;
+    }
+
+    function m_data_service_project($id_service)
+    {
+        $this->db->select('*');
+        $this->db->from('project');
+        $this->db->join('project_service', 'project_service.tittle_project = project.project_id');
+        $this->db->where('id_service_project', $id_service);
+        $this->db->order_by('id_project', 'desc');
+        $query = $this->db->get();
+        return $query->result();
     }
 }

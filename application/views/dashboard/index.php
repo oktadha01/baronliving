@@ -141,7 +141,7 @@
 
             <div class="section-header pt-2">
                 <!-- <span><span class="font-auto size-50px">A</span><span class="font-auto size-30px">bout us</span></span> -->
-                <h2 data-aos="fade-down">Realisasikan Idemu
+                <h2 data-aos="fade-down">Realisasikan Idemu <br>
                     Bersama Baron Living Studio
                 </h2>
                 <p class="text-dark" data-aos="fade-left">
@@ -151,7 +151,7 @@
                     Cukup ceritakan desain impianmu dan tim kami akan bekerja untuk merealisasikannya.
                 </p>
                 <center class="mt-5" data-aos="fade-right">
-                    <p><a class="btn-cta-abaut" href="#">Ceritakan Idemu <i class="bi bi-whatsapp"></i></a></p>
+                    <p><a class="btn-cta" href="#">Ceritakan Idemu </a></p>
                 </center>
             </div>
             <!-- <hr> -->
@@ -199,7 +199,7 @@
                 <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first" data-aos="fade-right">
                     <h3>Konsultasi <em>Gratis</em></h3>
                     <p>Ceritakan setiap ide dan harapanmu dan dapatkan solusi terbaik secara cuma - cuma dari tim arsitek berpengalaman.</p>
-                    <a class="cta-btn align-self-start" href="#">Coba Sekarang</a>
+                    <a class="btn-cta align-self-start" href="#">Coba Sekarang</a>
                 </div>
 
                 <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center" data-aos="fade-left">
@@ -457,7 +457,7 @@
             <div class="row">
                 <div class="col-12">
                     <center>
-                        <a href="<?php echo base_url('Artikel'); ?>" style="border: 1px solid;padding: 12px;border-radius: 11px;">Lihat Artikel Lainnya >></a>
+                        <a href="<?php echo base_url('Artikel'); ?>" class="btn-cta">Lihat Artikel Lainnya >></a>
                     </center>
                 </div>
             </div>

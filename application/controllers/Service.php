@@ -18,7 +18,6 @@ class Service extends CI_Controller
         $data['_view'] = 'service/service';
         $data['data_service'] = $this->m_service->m_data_service($tittle);
         $this->load->view('layout/index', $data);
-       
     }
     function select_project()
     {
@@ -154,8 +153,41 @@ class Service extends CI_Controller
         $data = $this->m_service->m_hapus_foto_service($id_foto);
         echo json_encode($data);
     }
+    function upload_foto_meta_service()
+    {
+        $config['upload_path'] = "./upload/service/";
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['encrypt_name'] = TRUE;
+        $this->load->library('upload', $config);
+        if ($this->upload->do_upload("foto-meta-service")) {
+            $data = array('upload_data' => $this->upload->data());
+            $id_project = $this->input->post('id-project');
+            $foto_meta_service = $data['upload_data']['file_name'];
+            $uploadedImage = $this->upload->data();
+            $this->resizeImagemeta($uploadedImage['file_name']);
+            $update = $this->m_service->m_upload_foto_meta_service($id_project, $foto_meta_service);
+            echo json_encode($update);
+        }
+        exit;
+    }
+    function load_foto_meta_service()
+    {
+        echo '<input type="file" id="foto-meta-service" name="foto" class="file-foto" hidden>';
+        $id_project = $this->input->post('id-project');
+        $data['foto_meta'] = $this->m_service->m_load_foto_meta_service($id_project);
+        foreach ($data['foto_meta'] as $row) :
+
+            if ($row->foto_meta_service == '') {
+                echo '<img id="preview-foto-meta-service" src="' . base_url('assets') . '/img/jpeg.jpg" class="img-fluid" style="width: 8rem;">';
+            } else {
+                echo '<img id="preview-foto-meta-service" src="' . base_url('upload') . '/service/' . $row->foto_meta_service . '" class="img-fluid" style="width: 8rem;">';
+            }
+        endforeach;
+    }
     function resizeImage($filename)
     {
+        $foto_lama = $this->input->post('foto-lama');
+        unlink('./upload/service/' . $foto_lama);
         $source_path = 'upload/service/' . $filename;
         $target_path = 'upload/service/';
         $config = [
@@ -165,6 +197,30 @@ class Service extends CI_Controller
             'maintain_ratio' => TRUE,
             'quality' => '50%',
             'width' => '1440',
+            'height' => 'auto',
+        ];
+        $this->load->library('image_lib', $config);
+        if (!$this->image_lib->resize()) {
+            return [
+                'status' => 'error compress',
+                'message' => $this->image_lib->display_errors()
+            ];
+        }
+        $this->image_lib->clear();
+        return 1;
+    }
+
+    function resizeImagemeta($filename)
+    {
+        $source_path = 'upload/service/' . $filename;
+        $target_path = 'upload/service/';
+        $config = [
+            'image_library' => 'gd2',
+            'source_image' => $source_path,
+            'new_image' => $target_path,
+            'maintain_ratio' => TRUE,
+            'quality' => '50%',
+            'width' => '140',
             'height' => 'auto',
         ];
         $this->load->library('image_lib', $config);

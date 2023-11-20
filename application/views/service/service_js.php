@@ -56,7 +56,6 @@
                 alert("Data Gagal Diupload");
             }
         });
-
     });
     $('#btn-cencel-add-project').click(function() {
         $('#btn-cencel-add-project, #btn-save-project, #form-add-project').hide();

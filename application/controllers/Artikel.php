@@ -92,7 +92,7 @@ class Artikel extends CI_Controller
 		}
 
 		$data['_title'] = $judul_berita;
-		$data['_metafoto'] = $meta_foto;
+		$data['_metafoto'] = base_url('upload').'/'.$meta_foto;
 		$data['_description'] = 'PT Kanpa ' . $judul_berita . ' - ' . $meta_desk;
 		$data['_script'] = 'artikel/artikel_js';
 		$data['_view'] = 'artikel/page_artikel';
