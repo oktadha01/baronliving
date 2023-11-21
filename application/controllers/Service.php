@@ -155,6 +155,9 @@ class Service extends CI_Controller
     }
     function upload_foto_meta_service()
     {
+        $foto_lama = $this->input->post('foto-meta-service-old');
+        unlink('./upload/service/' . $foto_lama);
+
         $config['upload_path'] = "./upload/service/";
         $config['allowed_types'] = 'gif|jpg|png';
         $config['encrypt_name'] = TRUE;
@@ -172,17 +175,56 @@ class Service extends CI_Controller
     }
     function load_foto_meta_service()
     {
-        echo '<input type="file" id="foto-meta-service" name="foto" class="" hidden>';
+        echo '<input type="file" id="foto-meta-service" name="foto" class="file-foto-meta-service" hidden>';
         $id_project = $this->input->post('id-project');
         $data['foto_meta'] = $this->m_service->m_load_foto_meta_service($id_project);
         foreach ($data['foto_meta'] as $row) :
 
+            echo '<input type="text" id="foto-meta-service-old" value="' . $row->foto_meta_service . '" hidden>';
             if ($row->foto_meta_service == '') {
                 echo '<img id="preview-foto-meta-service" src="' . base_url('assets') . '/img/jpeg.jpg" class="img-fluid" style="width: 8rem;">';
             } else {
+
                 echo '<img id="preview-foto-meta-service" src="' . base_url('upload') . '/service/' . $row->foto_meta_service . '" class="img-fluid" style="width: 8rem;">';
             }
         endforeach;
+        echo '<script>
+        
+        $("#foto-meta-service").change(function(e) {
+            var fileName = e.target.files[0].name;
+            $("#nm-foto-meta-service").val(fileName);
+    
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                // get loaded data and render thumbnail.
+                document.getElementById("preview-foto-meta-service").src = e.target.result;
+            };
+            // read the image file as a data URL.
+            reader.readAsDataURL(this.files[0]);
+            const foto_meta_service = $("#foto-meta-service").prop("files")[0];
+            let formData = new FormData();
+            formData.append("id-project", $("#id-project").val());
+            formData.append("foto-meta-service", foto_meta_service);
+            formData.append("foto-meta-service-old", $("#foto-meta-service-old").val());
+    
+            $.ajax({
+                type: "POST",
+                url: "'.site_url("Service/upload_foto_meta_service").'",
+                data: formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                    alert("Berhasil ...");
+                    load_foto_meta_service();
+    
+                },
+                error: function() {
+                    alert("Data Gagal Diupload");
+                }
+            });
+        });
+        </script>';
     }
     function resizeImage($filename)
     {

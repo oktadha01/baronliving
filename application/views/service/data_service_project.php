@@ -7,7 +7,7 @@
                 ?>
                     <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="accordion-header">
-                            <button class="accordion-button collapsed data-project" type="button" data-id-project="<?php echo $data->id_project; ?>" data-bs-toggle="collapse" data-bs-target="#faq-content-<?php echo $data->id_project; ?>">
+                            <button class="accordion-button collapsed data-project" type="button" data-id-project="<?php echo $data->id_project; ?>" data-project-id="<?php echo $data->project_id; ?>" data-bs-toggle="collapse" data-bs-target="#faq-content-<?php echo $data->id_project; ?>">
                                 <i class="bi bi-question-circle question-icon"></i>
                                 <?php echo $data->nm_project; ?>
                             </button>
@@ -24,7 +24,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div id="load-foto-meta-service-<?php echo $data->id_project; ?>" class="col-lg-2 col-md-2 col-12">
+                                    <div id="load-foto-meta-service-<?php echo $data->id_project; ?>" class="col-lg-2 col-md-2 col-12 remove-load-foto-meta-service">
 
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-12">
@@ -35,8 +35,6 @@
                                             <textarea id="desc-project-edit" class="form-control" name="desc_project" required readonly><?php echo $data->desc_project; ?></textarea>
                                         </div>
                                     </div>
-                                    <input type="text" name="" id="id-project" value="<?php echo $data->id_project; ?>" hidden>
-                                    <input type="text" name="" id="project-id" value="<?php echo $data->project_id; ?>" hidden>
                                 </div>
                                 <hr>
                                 <div id="data<?php echo $data->id_project; ?>" class="data"></div>
@@ -46,6 +44,8 @@
                 <?php
                 endforeach;
                 ?>
+                <input type="text" name="" id="id-project" value="" hidden>
+                <input type="text" name="" id="project-id" value="" hidden>
             </div>
         </div>
     </div>
@@ -58,10 +58,11 @@
         $('.data').removeClass('data-foto-service')
         $('#data' + $(this).data('id-project')).addClass('data-foto-service');
         $('#id-project').val($(this).data('id-project'));
-        
+        $('#project-id').val($(this).data('project-id'));
+
         let formData = new FormData();
         formData.append('id-service', $(this).data('id-project'));
-        
+
         $.ajax({
             type: 'POST',
             url: "<?php echo site_url('Service/data_foto_architec'); ?>",
@@ -72,6 +73,7 @@
             success: function(data) {
                 $('.data-foto-service').html(data).show();
                 load_foto_meta_service();
+
             },
             error: function() {
                 alert("Data Gagal Diupload");
@@ -109,61 +111,35 @@
             }
         });
     });
+
     $(document).on("click", "#preview-foto-meta-service", function() {
-        // $('#meta-foto').val($(this).data('meta-foto'));
-        var file = $(this).parents().find("#foto-meta-service");
+        var file = $(this).parents().find(".file-foto-meta-service");
         file.trigger("click");
-        // alert('ya')
     });
-    $('#foto-meta-service').change(function(e) {
-        var fileName = e.target.files[0].name;
-        // $("#nm-foto-service").val(fileName);
 
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            // get loaded data and render thumbnail.
-            document.getElementById("preview-foto-meta-service").src = e.target.result;
-        };
-        // read the image file as a data URL.
-        reader.readAsDataURL(this.files[0]);
-        const foto_meta_service = $('#foto-meta-service').prop('files')[0];
-        let formData = new FormData();
-        formData.append('id-project', $('#id-project').val());
-        formData.append('foto-meta-service', foto_meta_service);
-
-        $.ajax({
-            type: 'POST',
-            url: "<?php echo site_url('Service/upload_foto_meta_service'); ?>",
-            data: formData,
-            cache: false,
-            processData: false,
-            contentType: false,
-            success: function(data) {
-                alert('Berhasil ...');
-            },
-            error: function() {
-                alert("Data Gagal Diupload");
-            }
-        });
-    });
-    
     function load_foto_meta_service() {
         // alert($('#id-project').val())
-        let formData = new FormData();
-        formData.append('id-project', $('#id-project').val());
-        $.ajax({
-            type: 'POST',
-            url: "<?php echo site_url('Service/load_foto_meta_service'); ?>",
-            data: formData,
-            cache: false,
-            processData: false,
-            contentType: false,
-            success: function(data) {
-                $('#load-foto-meta-service-'+ $('#id-project').val()).html(data);
-            },
-            error: function() {
-                alert("Data Gagal Diupload");
-            }
-        });
+        var delayInMilliseconds = 1000; //1 second
+        $('.remove-load-foto-meta-service').html('0');
+        setTimeout(function() {
+
+            let formData = new FormData();
+            formData.append('id-project', $('#id-project').val());
+            $.ajax({
+                type: 'POST',
+                url: "<?php echo site_url('Service/load_foto_meta_service'); ?>",
+                data: formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                    $('#load-foto-meta-service-' + $('#id-project').val()).html(data);
+
+                },
+                error: function() {
+                    alert("Data Gagal Diupload");
+                }
+            });
+        }, delayInMilliseconds);
     }
 </script>
