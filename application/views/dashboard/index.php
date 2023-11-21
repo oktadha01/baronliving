@@ -377,16 +377,16 @@
                                 $nm_project = $rows->nm_project;
                                 $tittle = preg_replace("![^a-z0-9]+!i", "-", $nm_project);
                             ?>
-                                <a href="<?php echo base_url(); ?>detail/project/Custom-Furnitur/<?php echo $tittle; ?>">
-                                    <div class="col-lg-6 col-md-6 col-12" data-aos="fade-left" style="padding-right:0 ;">
+                                <div class="col-lg-6 col-md-6 col-12" data-aos="fade-left" style="padding-right:0 ;">
+                                    <a href="<?php echo base_url(); ?>detail/project/Custom-Furnitur/<?php echo $tittle; ?>">
                                         <div class="img-col6">
                                             <img src="<?= base_url('upload'); ?>\service\<?= $rows->foto_service; ?>" class="img-fluid">
                                         </div>
                                         <div style="position: relative;">
                                             <h1 class="text-pos size-col6">Furnitur <?= $rows->nm_project; ?></h1>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             <?php
                             }
                             ?>
