@@ -19,8 +19,8 @@
                                         <label class="desk" for="">Tittle & Description</label>
                                     </div>
                                     <div class="col-6">
-                                        <button type="button" id="btn-edit" class="btn-edit-desc-project btn btn-sm float-right btn-outline-warning"><i class="fa-regular fa-pen-to-square"></i> Edit Description</button>
-                                        <button type="button" id="btn-save" class="btn-save-desc-project btn btn-sm float-right btn-outline-success" hidden><i class=" fa-regular fa-pen-to-square"></i> Save Description</button>
+                                        <button type="button" id="btn-edit-<?= $data->project_id; ?>" class="btn-edit-desc-project btn btn-sm float-right btn-outline-warning" data-project-id="<?= $data->project_id; ?>"><i class="fa-regular fa-pen-to-square"></i> Edit Description</button>
+                                        <button type="button" id="btn-save-<?= $data->project_id; ?>" class="btn-save-desc-project btn btn-sm float-right btn-outline-success" data-project-id="<?= $data->project_id; ?>" hidden><i class=" fa-regular fa-pen-to-square"></i> Save Description</button>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -29,10 +29,10 @@
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-12">
                                         <div class="form-group mt-2">
-                                            <input type="text" id="tittle-project" class="form-control" name="tittle_project" required readonly value="<?php echo $data->nm_project; ?>">
+                                            <input type="text" id="tittle-project-<?= $data->project_id; ?>" class="form-control" name="tittle_project" required readonly value="<?php echo $data->nm_project; ?>">
                                         </div>
                                         <div class="form-group mt-2">
-                                            <textarea id="desc-project-edit" class="form-control" name="desc_project" required readonly><?php echo $data->desc_project; ?></textarea>
+                                            <textarea id="desc-project-edit-<?= $data->project_id; ?>" class="form-control" name="desc_project" required readonly><?php echo $data->desc_project; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -82,21 +82,21 @@
     });
     $('.btn-save-desc-project').removeAttr('hidden', true).hide();
     $('.btn-edit-desc-project').click(function() {
-        $('#btn-save').show();
-        $('#btn-edit').hide();
-        $('#desc-project-edit').removeAttr('readonly', true);
-        $('#tittle-project').removeAttr('readonly', true);
+        $('#btn-save-' + $(this).data('project-id')).show();
+        $('#btn-edit-' + $(this).data('project-id')).hide();
+        $('#desc-project-edit-' + $(this).data('project-id')).removeAttr('readonly', true);
+        $('#tittle-project-' + $(this).data('project-id')).removeAttr('readonly', true);
     });
     $('.btn-save-desc-project').click(function() {
-        $('#btn-save').hide();
-        $('#btn-edit').show();
-        $('#desc-project-edit').attr('readonly', true);
-        $('#tittle-project').attr('readonly', true);
+        $('#btn-save-' + $(this).data('project-id')).hide();
+        $('#btn-edit-' + $(this).data('project-id')).show();
+        $('#desc-project-edit-' + $(this).data('project-id')).attr('readonly', true);
+        $('#tittle-project-' + $(this).data('project-id')).attr('readonly', true);
         let formData = new FormData();
         formData.append('id-project', $('#id-project').val());
         formData.append('project-id', $('#project-id').val());
-        formData.append('tittle-project', $('#tittle-project').val());
-        formData.append('desc-project', $('#desc-project-edit').val());
+        formData.append('tittle-project', $('#tittle-project-'+ $(this).data('project-id')).val());
+        formData.append('desc-project', $('#desc-project-edit-'+ $(this).data('project-id')).val());
 
         $.ajax({
             type: 'POST',
