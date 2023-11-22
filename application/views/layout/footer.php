@@ -47,20 +47,21 @@
 						<li>
 							<i class="far fa-building"></i>
 							<div>KOTA SOLO<br />
-							Jl. Samudra Pasai No.7, Kadipiro, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57136</div>
+								Jl. Samudra Pasai No.7, Kadipiro, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57136</div>
 						</li>
 					</ul>
+				</div>
+				<div class="social-links social-1" style="position: relative;">
+					<a href="https://bit.ly/BaronLiving"><i class="bi bi-whatsapp"></i></a>
+					<a href="#"><i class="bi bi-facebook"></i></a>
+					<a href="https://www.instagram.com/p/Cw2CMJUpAKP/?utm_source=ig_web_copy_link"><i class="bi bi-instagram"></i></a>
+					<a href=""><i class="bi bi-tiktok"></i></a>
 				</div>
 			</div>
 		</div>
 		<div class="row row_footer">
 
-			<div class="social-links social-1">
-				<a href="https://bit.ly/BaronLiving"><i class="bi bi-whatsapp"></i></a>
-				<a href="#"><i class="bi bi-facebook"></i></a>
-				<a href="https://www.instagram.com/p/Cw2CMJUpAKP/?utm_source=ig_web_copy_link"><i class="bi bi-instagram"></i></a>
-				<a href=""><i class="bi bi-tiktok"></i></a>
-			</div>
+
 		</div>
 		<div id="copyright">
 			&copy; BARON LIVING STUDIO 2020-2023
