@@ -150,8 +150,8 @@
                     Membantumu mewujudkan ruangan yang nyaman, fungsional, dan estetis untuk beristirahat, bekerja, serta menikmati kehidupan.
                     Cukup ceritakan desain impianmu dan tim kami akan bekerja untuk merealisasikannya.
                 </p>
-                <center class="mt-5" data-aos="fade-right">
-                    <p><a class="btn-cta" href="#">Ceritakan Idemu </a></p>
+                <center class="mt-5" data-aos="fade-right"> 
+                    <p><a class="btn-cta" href="https://bit.ly/BaronLiving">Ceritakan Idemu </a></p>
                 </center>
             </div>
             <!-- <hr> -->
@@ -199,7 +199,7 @@
                 <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first" data-aos="fade-right">
                     <h3>Konsultasi <em>Gratis</em></h3>
                     <p>Ceritakan setiap ide dan harapanmu dan dapatkan solusi terbaik secara cuma - cuma dari tim arsitek berpengalaman.</p>
-                    <a class="btn-cta align-self-start" href="#">Coba Sekarang</a>
+                    <a class="btn-cta align-self-start" href="https://bit.ly/BaronLiving">Coba Sekarang</a>
                 </div>
 
                 <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center" data-aos="fade-left">

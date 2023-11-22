@@ -1444,7 +1444,7 @@ footer .footer-cat,
 .services .details {
     margin: -100px 5px 5px 5px !important;
     padding: 47px 16px 10px !important;
-    min-height: 17rem;
+    min-height: 14rem;
 }
 
 h2 {
@@ -1567,6 +1567,11 @@ p {
 
 body {
     font-family: 'Poppins' !important;
+    letter-spacing: 0px;
+}
+
+p{
+    letter-spacing: normal;
 }
 
 .gallery {
@@ -1711,4 +1716,11 @@ body {
 .service-active {
     color: black;
     text-decoration-line: underline;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1024px) and (orientation: portrait) {
+    .section-header h2 {
+        font-size: 28px;
+    }
+
 }
