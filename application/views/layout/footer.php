@@ -52,7 +52,7 @@
 					</ul>
 				</div>
 				<div class="social-links social-1" style="position: relative;">
-					<a href="https://bit.ly/BaronLiving"><i class="bi bi-whatsapp"></i></a>
+					<a href="https://bit.ly/ChatBaronLiving"><i class="bi bi-whatsapp"></i></a>
 					<a href="#"><i class="bi bi-facebook"></i></a>
 					<a href="https://www.instagram.com/p/Cw2CMJUpAKP/?utm_source=ig_web_copy_link"><i class="bi bi-instagram"></i></a>
 					<a href=""><i class="bi bi-tiktok"></i></a>

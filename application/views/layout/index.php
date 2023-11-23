@@ -109,7 +109,7 @@
             include_once 'footer.php';
             ?>
         </main>
-        <a href="https://bit.ly/BaronLiving" class="scroll-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
+        <a href="https://bit.ly/ChatBaronLiving" class="scroll-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
         <img src="<?= base_url('assets'); ?>/img/wa.png" class="img-fluid btn-wa-fixed" alt="">
     <?php
     }
