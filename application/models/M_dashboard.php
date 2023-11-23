@@ -16,6 +16,7 @@ class M_dashboard extends CI_Model
         $this->db->from('service');
         $this->db->join('project_service', 'project_service.id_service_project = service.id_service');
         $this->db->ORDER_BY('project_service.id_service_project', 'RANDOM');
+        // $this->db->ORDER_BY('foto.foto_service', 'RANDOM');
         $this->db->LIMIT('4');
         $query = $this->db->get();
         return $query->result();

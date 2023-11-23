@@ -26,22 +26,24 @@
     ?>
         <meta property="og:image" content="<?php echo $_metafoto; ?>">
     <?php
-    } else {
+    } else { ?>
+        <meta property="og:image" content="<?php echo base_url('assets'); ?>/img/bls-logo.png">
+    <?php
     }
     ?>
     <?php
     if (isset($_description)) {
     ?>
         <meta name="description" content="<?php echo $_description; ?>">
-        <meta name="keywords"content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
+        <meta name="keywords" content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
     <?php
     } else {
     ?>
         <meta name="description" content="One Stop Solution untuk semua kebutuhan Interiormu, Merencanakan, merancang, melakukan konstruksi, dan custom furnitur Membantumu mewujudkan ruangan yang nyaman, Membantumu mewujudkan ruangan yang nyaman">
-        <meta name="keywords"content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
-        <?php } ?>
+        <meta name="keywords" content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
+    <?php } ?>
     <meta name="robots" content="INDEX,FOLLOW">
-    
+
     <style>
         .opacity-body {
             margin-top: 0;
