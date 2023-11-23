@@ -296,7 +296,7 @@
     <section id="portfolio" class="section pt-5rem">
 
         <div class="container">
-            <div class="section-header">
+            <div class="section-header p-0">
                 <h2>Project Kami </h2>
                 <!-- <p>Ea vitae aspernatur deserunt voluptatem impedit deserunt magnam occaecati dssumenda quas ut ad dolores adipisci aliquam.</p> -->
             </div>
