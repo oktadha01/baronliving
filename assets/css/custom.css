@@ -1570,7 +1570,7 @@ body {
     letter-spacing: 0px;
 }
 
-p{
+p {
     letter-spacing: normal;
 }
 
@@ -1722,5 +1722,17 @@ p{
     .section-header h2 {
         font-size: 28px;
     }
+
+}
+
+.pt-5rem {
+    padding-top: 5rem !important;
+}
+
+.text-border {
+    background: #eceeef;
+    padding-bottom: 7px;
+    border-top-left-radius: 32px;
+    border-bottom-right-radius: 32px;
 
 }

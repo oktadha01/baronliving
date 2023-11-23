@@ -120,7 +120,7 @@
         transition: 400ms ease-in-out;
     }
 </style>
-<section id="home" class="pt-5rem pb-5 d-flex align-items-center">
+<section id="home" class="d-flex align-items-center">
     <div class="d-flex flex-column align-items-center position-relative min-height-video w-100" data-aos="zoom-out">
         <section class="video-container">
             <video src="assets/video/Kayunara.mp4" autoplay loop playsinline muted></video>
@@ -136,10 +136,10 @@
 
 <main id="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class=" p-0">
+    <section id="about" class="section pb-0">
         <div class="container" style="background: #eceeef6e;border-radius: 14px;">
 
-            <div class="section-header pt-2">
+            <div class="section-header" style="padding-bottom: 23px;">
                 <!-- <span><span class="font-auto size-50px">A</span><span class="font-auto size-30px">bout us</span></span> -->
                 <h2 data-aos="fade-down">Realisasikan Idemu <br>
                     Bersama Baron Living Studio
@@ -150,7 +150,7 @@
                     Membantumu mewujudkan ruangan yang nyaman, fungsional, dan estetis untuk beristirahat, bekerja, serta menikmati kehidupan.
                     Cukup ceritakan desain impianmu dan tim kami akan bekerja untuk merealisasikannya.
                 </p>
-                <center class="mt-5" data-aos="fade-right"> 
+                <center class="mt-5" data-aos="fade-right">
                     <p><a class="btn-cta" href="https://bit.ly/BaronLiving">Ceritakan Idemu </a></p>
                 </center>
             </div>
@@ -159,9 +159,9 @@
     </section><!-- End About Section -->
 
     <!-- ======= Call To Action Section ======= -->
-    <section id="services" class="p-0">
-        <div class="container container-service" data-aos="fade-up">
-            <div class="section-header pb-2">
+    <section id="services" class="section pb-0 pt-5rem">
+        <div class="container container-service p-0" data-aos="fade-up">
+            <div class="section-header pb-0">
                 <h2>Pilih Kebutuhanmu</h2>
             </div>
             <div class="row services">
@@ -193,8 +193,7 @@
                 ?>
             </div>
         </div>
-        <div class="container cta aos-init aos-animate mt-5" data-aos="zoom-out">
-
+        <div class="container cta aos-init aos-animate mt-4 mb-0" data-aos="zoom-out">
             <div class="row g-5">
                 <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first" data-aos="fade-right">
                     <h3>Konsultasi <em>Gratis</em></h3>
@@ -211,9 +210,9 @@
             </div>
 
         </div>
-        <div class="container services" data-aos="fade-up">
+        <div class="container services pt-5rem" data-aos="fade-up">
 
-            <div class="section-header">
+            <div class="section-header p-0">
                 <h2>Mengapa Harus Baron Living Studio ?</h2>
                 <!-- <p>Ea vitae aspernatur deserunt voluptatem impedit deserunt magnam occaecati dssumenda quas ut ad dolores adipisci aliquam.</p> -->
             </div>
@@ -294,7 +293,7 @@
         </div>
     </section>
 
-    <section id="portfolio" class="pb-0">
+    <section id="portfolio" class="section pt-5rem">
 
         <div class="container">
             <div class="section-header">
@@ -425,14 +424,12 @@
                     <?php } ?>
                 </div>
             </div>
-            <hr>
         </div>
-        <div class="container">
-            <div class="section-header">
+        <div class="container pt-5rem">
+            <div class="section-header text-border">
                 <h2>Teman Perjalananmu</h2>
                 <p>Baron Living Studio bukan sekadar jasa desain interior. Kami bersedia menjadi mitra dan teman perjalananmu dalam mewujudkan ruang ideal sesuai keinginan. Dengan komunikasi yang terbuka dan informatif, kami akan mendengarkan setiap kebutuhan dan ide-ide unikmu.</p>
             </div>
-            <hr>
         </div>
     </section><!-- End Services Section -->
     <!-- ======= artikel Section ======= -->
