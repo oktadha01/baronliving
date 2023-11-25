@@ -120,23 +120,25 @@
         transition: 400ms ease-in-out;
     }
 </style>
-<section id="home" class="d-flex align-items-center">
+<section id="home" class="d-flex align-items-center pb-1">
     <div class="d-flex flex-column align-items-center position-relative min-height-video w-100" data-aos="zoom-out">
-        <section class="video-container">
-            <video src="assets/video/Kayunara.mp4" autoplay loop playsinline muted></video>
-            <div class="callout">
-                <h1 class="text-light tile-video-header">AT THE WATER’S EDGE – FISHERMAN’S HOUSE BY STUDIO PRINEAS</h1>
-                <div class="button">
-                    <div class="inner">Watch Video</div>
-                </div>
-            </div>
+        <section class="video-container ">
+            <video data-yt2html5="https://www.youtube.com/watch?v=lNhemye7TZE" autoplay loop playsinline muted></video>
+            <!-- <video src="assets/video/Kayunara.mp4" autoplay loop playsinline muted></video> -->
+            <!-- <iframe src="https://www.youtube.com/embed/lNhemye7TZE?si=hyVaSsbf0srZDJXT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            <!-- <div class="callout"> -->
+                <!-- <h1 class="text-light tile-video-header">AT THE WATER’S EDGE – FISHERMAN’S HOUSE BY STUDIO PRINEAS</h1> -->
+                <!-- <div class="button"> -->
+                    <!-- <div class="inner">Watch Video</div> -->
+                <!-- </div> -->
+            <!-- </div> -->
         </section>
     </div>
 </section>
 
 <main id="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class="section pb-0">
+    <section id="about" class="section pb-0 pt-7rem">
         <div class="container" style="background: #eceeef6e;border-radius: 14px;">
 
             <div class="section-header" style="padding-bottom: 23px;">
