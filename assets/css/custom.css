@@ -1504,10 +1504,12 @@ p {
 .size-col6 {
     font-size: 25px;
 }
+
 @media only screen and (min-width: 200px) and (max-width: 1024px) and (orientation: portrait) {
     .size-col12 {
         font-size: 23px;
     }
+
     .size-col6 {
         font-size: 23px;
     }
@@ -1572,7 +1574,16 @@ p {
 
 /* AND CUSTOM SELECT 2 */
 
-body {
+body,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
     font-family: 'Poppins' !important;
     letter-spacing: 0px;
 }
@@ -1728,9 +1739,14 @@ p {
 .pt-5rem {
     padding-top: 5rem !important;
 }
+
 .pt-7rem {
     padding-top: 7rem !important;
 }
+.pt-12rem {
+    padding-top: 12rem !important;
+}
+
 @media only screen and (min-width: 200px) and (max-width: 1024px) and (orientation: portrait) {
     .section-header h2 {
         font-size: 28px;
@@ -1748,4 +1764,14 @@ p {
     border-top-left-radius: 32px;
     border-bottom-right-radius: 32px;
 
+}
+
+.breadcrumbs {
+    padding: 15px 0;
+    background: #e4dfdf;
+    min-height: 40px;
+}
+
+.portfolio-details {
+    padding-top: 11rem;
 }

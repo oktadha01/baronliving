@@ -18,10 +18,14 @@ class Detail extends CI_Controller
     {
         $tittle_service = $this->uri->segment(3);
         $tittle = preg_replace("![^a-z0-9]+!i", " ", $tittle_service);
-
-        $data['_title'] = $tittle;
+        if ($tittle == 'all') {
+            $data['_title'] = 'All Project';
+        } else {
+            $data['_title'] = $tittle;
+        }
         $data['_script'] = 'detail/detail_js';
         $data['_view'] = 'detail/detail';
+        $data['data_service'] = $this->m_detail->m_data_service();
         $data['detail_service'] = $this->m_detail->m_detail_service($tittle);
         $this->load->view('layout/index', $data);
     }
@@ -37,7 +41,7 @@ class Detail extends CI_Controller
             $meta_desk = $row->desc_project;
         }
         $data['_title'] = $tittle_project;
-        $data['_metafoto'] = base_url('upload').'/service/'.$meta_foto;
+        $data['_metafoto'] = base_url('upload') . '/service/' . $meta_foto;
         $data['_description'] = 'Baron Living Studio - ' . $tittle_project . ' - ' . $meta_desk;
         $data['_script'] = 'detail/detail_js';
         $data['_view'] = 'detail/detail_project';
