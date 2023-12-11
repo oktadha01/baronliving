@@ -144,7 +144,7 @@
 <main class="mt-5" id="main">
 
     <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog">
+    <section id="artikel" class="blog">
         <div class="container" data-aos="fade-up">
 
             <div class="row g-5">

@@ -40,34 +40,20 @@ class Artikel extends CI_Controller
 
 				$output .= '
 				<div class="col-lg-6 col-12 ">
-				<article class="d-flex flex-column">
-
-                                <div class="post-img">
-                                    <img src="' . base_url('upload') . '/' . $row->foto_berita . '" alt="" class="img-fluid">
-                                </div>
-
-                                <h2 class="title">
-                                    <a href="' . base_url('Artikel/page/') . $tittle_news . '">' . $row->judul_berita . '</a>
-                                </h2>
-
-                                <div class="meta-top">
-                                    <ul>
-                                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="' . $row->tgl_berita . '">' . $row->tgl_berita . '</time></li>
-                                        <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> ' . $row->view_berita . ' Views</li>
-                                    </ul>
-                                </div>
-
-                                <div class="content">
-                                    <p>
-                                        ' . $row->meta_desk . '
-                                    </p>
-                                </div>
-
-                                <div class="read-more mt-auto align-self-end">
-                                    <a href="blog-details.html">Read More</a>
-                                </div>
-
-                            </article>
+					<article class="d-flex flex-column">
+						<a href="' . base_url('Artikel/page/') . $tittle_news . '">
+							<div class="post-img">
+								<img src="' . base_url('upload') . '/' . $row->foto_berita . '" alt="" class="img-fluid">
+							</div>
+						</a>
+						<div class="meta">
+                        	<span class="post-date">' . $row->tgl_berita . '</span>
+                        	<span class="" style="float: right;">' . $row->view_berita . ' <i class="bi bi-eye"></i></span>
+                        </div>
+                        <h2 class="title">
+                            <a href="' . base_url('Artikel/page/') . $tittle_news . '">' . $row->judul_berita . '</a>
+                        </h2>
+					</article>
 				</div>
 				';
 			}
@@ -92,7 +78,7 @@ class Artikel extends CI_Controller
 		}
 
 		$data['_title'] = $judul_berita;
-		$data['_metafoto'] = base_url('upload').'/'.$meta_foto;
+		$data['_metafoto'] = base_url('upload') . '/' . $meta_foto;
 		$data['_description'] = 'PT Kanpa ' . $judul_berita . ' - ' . $meta_desk;
 		$data['_script'] = 'artikel/artikel_js';
 		$data['_view'] = 'artikel/page_artikel';
@@ -158,7 +144,7 @@ class Artikel extends CI_Controller
 				</div>
 
 				<div class="read-more mt-auto align-self-end">
-					<a href="blog-details.html">Read More</a>
+					<a href="' . base_url('Artikel/page/') . $tittle_news . '">Read More</a>
 				</div>
 
 			</article>

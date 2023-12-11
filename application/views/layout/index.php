@@ -79,8 +79,8 @@
     <link href="<?php echo base_url('assets'); ?>/css/variables.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.6.6/summernote.min.css" rel="stylesheet" />
     <link href="<?php echo base_url('assets'); ?>/css/main.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.6.6/summernote.min.css" rel="stylesheet" />
     <link href="<?php echo base_url('assets'); ?>/css/custom.css" rel="stylesheet">
 
 </head>
@@ -119,6 +119,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="<?php echo base_url('assets'); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <script>
         new YouTubeToHtml5();
     </script>
@@ -136,7 +137,6 @@
 
     <!-- Template Main JS File -->
     <script src="<?php echo base_url('assets'); ?>/js/main.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 
     <?php
     if (isset($_script) && !empty($_script)) {

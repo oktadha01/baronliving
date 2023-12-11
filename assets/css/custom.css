@@ -1743,6 +1743,7 @@ p {
 .pt-7rem {
     padding-top: 7rem !important;
 }
+
 .pt-12rem {
     padding-top: 12rem !important;
 }
@@ -1774,4 +1775,10 @@ p {
 
 .portfolio-details {
     padding-top: 11rem;
+}
+
+.blog .sidebar .recent-posts img {
+    width: auto;
+    height: 62px;
+    margin-right: 15px;
 }
