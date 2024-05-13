@@ -354,7 +354,7 @@
                                 <div class="col-lg-6 col-md-6 col-12" data-aos="fade-right">
                                     <a href="<?php echo base_url(); ?>detail/project/Desain-Interior/<?php echo $tittle; ?>">
                                         <div class="img-col6">
-                                            <img src="<?= base_url('upload'); ?>\service/<?= $rows->foto_service; ?>" class="img-fluid">
+                                            <img src="<?= base_url('upload'); ?>/service/<?= $rows->foto_service; ?>" class="img-fluid">
                                         </div>
                                         <div style="position: relative;">
                                             <h1 class="text-pos size-col12">Interior <?= $rows->nm_project; ?></h1>
@@ -381,7 +381,7 @@
                                 <div class="col-lg-6 col-md-6 col-12" data-aos="fade-left">
                                     <a href="<?php echo base_url(); ?>detail/project/Custom-Furnitur/<?php echo $tittle; ?>">
                                         <div class="img-col6">
-                                            <img src="<?= base_url('upload'); ?>\service\<?= $rows->foto_service; ?>" class="img-fluid">
+                                            <img src="<?= base_url('upload'); ?>/service/<?= $rows->foto_service; ?>" class="img-fluid">
                                         </div>
                                         <div style="position: relative;">
                                             <h1 class="text-pos size-col6">Furnitur <?= $rows->nm_project; ?></h1>
@@ -410,10 +410,10 @@
                                 $nm_project = $rows->nm_project;
                                 $tittle = preg_replace("![^a-z0-9]+!i", "-", $nm_project);
                             ?>
-                                <a href="<?php echo base_url(); ?>detail/Kontraktor/Arsitektur/<?php echo $tittle; ?>">
+                                <a href="<?php echo base_url(); ?>detail/project/Kontraktor/<?php echo $tittle; ?>">
 
                                     <div class="col-12 img-col12">
-                                        <img src="<?= base_url('upload'); ?>\service\<?= $rows->foto_service; ?>" class="img-fluid" style="position: relative; bottom: 50%;">
+                                        <img src="<?= base_url('upload'); ?>/service/<?= $rows->foto_service; ?>" class="img-fluid" style="position: relative; bottom: 50%;">
                                     </div>
                                     <div style="position: relative;">
                                         <h1 class="text-pos size-col12">Kontraktor <?= $rows->nm_project; ?></h1>
