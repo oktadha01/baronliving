@@ -123,7 +123,7 @@
 <section id="home" class="d-flex align-items-center pb-1">
     <div class="d-flex flex-column align-items-center position-relative min-height-video w-100" data-aos="zoom-out">
         <section class="video-container ">
-            <video data-yt2html5="https://www.youtube.com/watch?v=lNhemye7TZE" autoplay loop playsinline muted></video>
+            <video data-yt2html5="https://www.youtube.com/watch?v=aTCCXOF3Euw" autoplay loop playsinline muted></video>
             <!-- <video src="assets/video/Kayunara.mp4" autoplay loop playsinline muted></video> -->
             <!-- <iframe src="https://www.youtube.com/embed/lNhemye7TZE?si=hyVaSsbf0srZDJXT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             <!-- <div class="callout"> -->
