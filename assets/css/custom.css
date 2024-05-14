@@ -399,20 +399,20 @@
 }
 
 .min-height-video {
-    min-height: 39rem;
+    min-height: 41rem;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 1024px) and (orientation: portrait) {
     .min-height-video {
-        min-height: 11rem !important;
-        max-height: 11rem !important;
+        min-height: 15rem !important;
+        /* max-height: 11rem !important; */
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .min-height-video {
-        min-height: 24rem !important;
-        max-height: 24rem !important;
+        min-height: 30rem !important;
+        /* max-height: 24rem !important; */
     }
 }
 
@@ -1367,8 +1367,16 @@ footer .footer-cat,
     }
 }
 
+
+.header {
+    padding: 4px 0;
+}
 /* iPads (portrait)----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+@media only screen and (min-width: 375px) and (max-width: 1024px) and (orientation: portrait) {
+    .header {
+        padding: 13px 0;
+    }
+
     footer {
         padding-right: 3em;
         padding-left: 3em;
@@ -1383,6 +1391,10 @@ footer .footer-cat,
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .header {
+        padding: 13px 0;
+    }
+
     section {
         padding-bottom: 3em;
     }
@@ -1397,6 +1409,7 @@ footer .footer-cat,
         padding-bottom: 1em;
     }
 }
+
 
 /* Mini Tablet ----------- */
 @media only screen and (max-width: 600px) {

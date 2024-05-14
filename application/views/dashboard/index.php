@@ -123,8 +123,8 @@
 <section id="home" class="d-flex align-items-center pb-1">
     <div class="d-flex flex-column align-items-center position-relative min-height-video w-100" data-aos="zoom-out">
         <section class="video-container ">
-            <video data-yt2html5="https://www.youtube.com/watch?v=aTCCXOF3Euw" autoplay loop playsinline muted></video>
-            <!-- <video src="assets/video/Kayunara.mp4" autoplay loop playsinline muted></video> -->
+            <!-- <video data-yt2html5="https://www.youtube.com/watch?v=aTCCXOF3Euw" autoplay loop playsinline muted></video> -->
+            <video src="assets/video/baron.mp4" autoplay loop playsinline muted></video>
             <!-- <iframe src="https://www.youtube.com/embed/lNhemye7TZE?si=hyVaSsbf0srZDJXT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             <!-- <div class="callout"> -->
                 <!-- <h1 class="text-light tile-video-header">AT THE WATER’S EDGE – FISHERMAN’S HOUSE BY STUDIO PRINEAS</h1> -->
@@ -138,7 +138,7 @@
 
 <main id="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class="section pb-0 pt-7rem">
+    <section id="about" class="section pb-0">
         <div class="container" style="background: #eceeef6e;border-radius: 14px;">
 
             <div class="section-header" style="padding-bottom: 23px;">
@@ -222,7 +222,7 @@
                 <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-1.jpg" class="img-fluid" alt="">
+                            <img src="assets/img/desain-berkualitas.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
@@ -241,7 +241,7 @@
                 <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-2.jpg" class="img-fluid" alt="">
+                            <img src="assets/img/harga-kompetitif.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
@@ -259,7 +259,7 @@
                 <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-3.jpg" class="img-fluid" alt="">
+                            <img src="assets/img/cs.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
@@ -276,7 +276,7 @@
                 <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="500">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-4.jpg" class="img-fluid" alt="">
+                            <img src="assets/img/one-step-solution.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
