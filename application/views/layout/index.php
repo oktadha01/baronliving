@@ -109,7 +109,7 @@
             include_once 'footer.php';
             ?>
         </main>
-        <a href="https://bit.ly/ChatBaronLiving" class="scroll-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
+        <div class="scroll-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></div>
         <img src="<?= base_url('assets'); ?>/img/wa.png" class="img-fluid btn-wa-fixed" alt="">
     <?php
     }
@@ -153,6 +153,13 @@
         $(document).ready(function() {
             var newURL = location.href.split("#")[0];
             window.history.pushState('object', document.title, newURL);
+
+            $('.scroll-top').click(function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            })
         });
 
         function footerToggle(footerBtn) {

@@ -177,7 +177,7 @@
 
                     <div class="col-xl-3 col-md-6" data-aos="fade-left" data-aos-delay="<?= $no++; ?>00" style="margin-top: 8rem;">
                         <div class="service-item">
-                            <div class="details position-relative" style="min-height: 12rem;">
+                            <div class="details position-relative" style="min-height: 11rem;">
                                 <div class="icon">
                                     <img src="<?php echo base_url('assets'); ?>/img/<?= $data->tittle_service; ?>.png" alt="" class="img-fluid">
                                     <!-- <i class="bi bi-person-workspace"></i> -->

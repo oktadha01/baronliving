@@ -1204,7 +1204,7 @@ footer .footer-cat,
     font-size: 20px;
     border: 1px solid;
     border-radius: 20px;
-    padding: 6px;
+    padding: 6px 7px;
 
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
@@ -1225,9 +1225,9 @@ footer .footer-cat,
     text-align: center;
 }
 
-#newsletter #address li:not(:first-child) {
+/* #newsletter #address li:not(:first-child) {
     padding: 20px 0;
-}
+} */
 
 #newsletter #address li i {
     font-size: 45px;
@@ -1259,6 +1259,13 @@ footer .footer-cat,
 
 #owner a {
     color: #fff;
+}
+
+.social-1 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
 }
 
 /* iPads to Smartphone for Common Elements ----------- */
@@ -1327,7 +1334,7 @@ footer .footer-cat,
     }
 
     .social-1 {
-        display: none !important;
+       margin-top: 0;
     }
 
     .social-2 {
@@ -1340,9 +1347,9 @@ footer .footer-cat,
         width: 100%;
     }
 
-    #address {
+    /* #address {
         margin-top: 6em;
-    }
+    } */
 
     #newsletter #address li i {
         width: auto;
@@ -1362,15 +1369,16 @@ footer .footer-cat,
         padding-bottom: 0;
     }
 
-    #newsletter #address li:not(:first-child) {
+    /* #newsletter #address li:not(:first-child) {
         padding: 20px 0 0;
-    }
+    } */
 }
 
 
 .header {
     padding: 4px 0;
 }
+
 /* iPads (portrait)----------- */
 @media only screen and (min-width: 375px) and (max-width: 1024px) and (orientation: portrait) {
     .header {
@@ -1456,7 +1464,7 @@ footer .footer-cat,
 .services .details {
     margin: -100px 5px 5px 5px !important;
     padding: 47px 16px 10px !important;
-    min-height: 14rem;
+    min-height: 18rem;
 }
 
 h2 {

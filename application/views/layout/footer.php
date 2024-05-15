@@ -1,4 +1,4 @@
-<section id="contact" class="contact pb-0 pt-0">
+<section id="contact" class="contact pb-0 pt-0" style="z-index: 99;position: relative;">
 	<footer>
 		<div>
 			<span class="logo">Baron Living Studio</span>
@@ -28,43 +28,30 @@
 					<li><a><span>One Stop Solution</span></a></li>
 				</ul>
 			</div>
-			<!-- <div class="col-3 footer-col-3">
-				<div class="link-cat" onclick="footerToggle(this)">
-					<span class="footer-toggle"></span>
-					<span class="footer-cat">Quick Links</span>
-				</div>
-				<ul class="footer-cat-links">
-					<li><a href=""><span>Reviews</span></a></li>
-					<li><a href=""><span>Terms & Condition</span></a></li>
-					<li><a href=""><span>Disclaimer</span></a></li>
-					<li><a href=""><span>Site Map</span></a></li>
-				</ul>
-			</div> -->
 			<div class="col-6 footer-col-6" id="newsletter">
 				<div id="address">
 					<span>Office Location</span>
-					<ul>
-						<li>
+					<ul style="display:flex;">
+						<li style="margin-right: 1rem;">
 							<i class="far fa-building"></i>
-							<div>KOTA SOLO<br />
-								Jl. Samudra Pasai No.7, Kadipiro, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57136</div>
+						</li>
+						<li>
+							<p class="text-light mb-0" style="line-height: normal;">KOTA SOLO</p>
+							<p class="text-light mb-0 small" style="line-height: normal;">Jl. Samudra Pasai No.7, Kadipiro, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57136</p>
+
 						</li>
 					</ul>
 				</div>
-				<div class="social-links social-1" style="position: relative;">
-					<a href="https://bit.ly/ChatBaronLiving"><i class="bi bi-whatsapp"></i></a>
-					<a href="#"><i class="bi bi-facebook"></i></a>
-					<a href="https://www.instagram.com/p/Cw2CMJUpAKP/?utm_source=ig_web_copy_link"><i class="bi bi-instagram"></i></a>
-					<a href=""><i class="bi bi-tiktok"></i></a>
-				</div>
+				<ul class="social-links social-1" style="position: relative;">
+					<li><a href="https://bit.ly/ChatBaronLiving"><i class="bi bi-whatsapp"></i></a></li>
+					<li><a href="#"><i class="bi bi-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/p/Cw2CMJUpAKP/?utm_source=ig_web_copy_link"><i class="bi bi-instagram"></i></a></li>
+					<li><a href=""><i class="bi bi-tiktok"></i></a></li>
+				</ul>
 			</div>
 		</div>
-		<div class="row row_footer">
-
-
-		</div>
 		<div id="copyright">
-			&copy; BARON LIVING STUDIO 2020-2023
+			&copy; BARON LIVING STUDIO 2020-2024
 		</div>
 
 	</footer>
