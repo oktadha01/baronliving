@@ -127,10 +127,10 @@
             <video src="assets/video/baron.mp4" autoplay loop playsinline muted></video>
             <!-- <iframe src="https://www.youtube.com/embed/lNhemye7TZE?si=hyVaSsbf0srZDJXT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             <!-- <div class="callout"> -->
-                <!-- <h1 class="text-light tile-video-header">AT THE WATER’S EDGE – FISHERMAN’S HOUSE BY STUDIO PRINEAS</h1> -->
-                <!-- <div class="button"> -->
-                    <!-- <div class="inner">Watch Video</div> -->
-                <!-- </div> -->
+            <!-- <h1 class="text-light tile-video-header">AT THE WATER’S EDGE – FISHERMAN’S HOUSE BY STUDIO PRINEAS</h1> -->
+            <!-- <div class="button"> -->
+            <!-- <div class="inner">Watch Video</div> -->
+            <!-- </div> -->
             <!-- </div> -->
         </section>
     </div>
@@ -177,7 +177,7 @@
 
                     <div class="col-xl-3 col-md-6" data-aos="fade-left" data-aos-delay="<?= $no++; ?>00" style="margin-top: 8rem;">
                         <div class="service-item">
-                            <div class="details position-relative" style="min-height: 11rem;">
+                            <div class="details position-relative" style="min-height: 13rem;">
                                 <div class="icon">
                                     <img src="<?php echo base_url('assets'); ?>/img/<?= $data->tittle_service; ?>.png" alt="" class="img-fluid">
                                     <!-- <i class="bi bi-person-workspace"></i> -->
@@ -464,7 +464,7 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-12">
                     <center>
                         <a href="<?php echo base_url('Artikel'); ?>" class="btn-cta">Lihat Artikel Lainnya >></a>
