@@ -44,8 +44,6 @@
                                 <?php
                                 $no = 0;
                                 foreach ($foto_project as $data) {
-
-
                                 ?>
                                     <?php
                                     if ($data->id_service == $idservice) {

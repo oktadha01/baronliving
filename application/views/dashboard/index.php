@@ -147,9 +147,7 @@
                     Bersama Baron Living Studio
                 </h2>
                 <p class="text-dark" data-aos="fade-left">
-                    Baron Living Studio menawarkan One Stop Solution untuk semua kebutuhan Interiormu.
-                    Kami merencanakan, merancang, melakukan konstruksi, dan custom furnitur dengan penuh dedikasi dan kreativitas.
-                    Membantumu mewujudkan ruangan yang nyaman, fungsional, dan estetis untuk beristirahat, bekerja, serta menikmati kehidupan.
+                    Baron Living Studio Membantumu mewujudkan ruangan yang nyaman, fungsional, dan estetis untuk beristirahat, bekerja, serta menikmati kehidupan.
                     Cukup ceritakan desain impianmu dan tim kami akan bekerja untuk merealisasikannya.
                 </p>
                 <center class="mt-5" data-aos="fade-right">
