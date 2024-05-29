@@ -47,6 +47,7 @@
 					<li><a href="#"><i class="bi bi-facebook"></i></a></li>
 					<li><a href="https://www.instagram.com/p/Cw2CMJUpAKP/?utm_source=ig_web_copy_link"><i class="bi bi-instagram"></i></a></li>
 					<li><a href=""><i class="bi bi-tiktok"></i></a></li>
+					<li><a href="mailto:studio@baronliving.com?subject=Information%20Request&body=For%20more%20information%20about%20Baron%20Living%27s%20services%20and%20portfolio%2C%20please%20visit%20their%20official%20website%3A%20http%3A%2F%2Fbaronliving.com"><i class="bi bi-envelope"></i></a></li>
 				</ul>
 			</div>
 		</div>
