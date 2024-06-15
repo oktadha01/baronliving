@@ -91,12 +91,13 @@
     <?php
     if (isset($_view_login) && !empty($_view_login)) {
         $this->load->view($_view_login);
-    } else {
-
-    ?>
+        } else {
+            
+            ?>
         <?php
         include_once 'navbar.php';
         ?>
+        <!-- <img src="https://wallpapercave.com/wp/wp9376859.jpg" alt=""> -->
         <main id="page" class="ml-page">
 
             <?php

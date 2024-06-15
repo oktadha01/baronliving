@@ -226,12 +226,10 @@
                             <div class="icon">
                                 <img src="assets/img/desain-berkualitas.png" class="img-fluid" alt="">
                             </div>
-                            <a href="#" class="stretched-link">
+                            <div class="stretched-link">
                                 <h3>Desain Berkualitas</h3>
-                            </a>
-                            <p>Kami tidak sekadar menciptakan desain yang estetis, melainkan juga mengedepankan fungsionalitas ruang dan
-                                didukung oleh tim profesional yang berpengalaman.
-                            </p>
+                            </div>
+                            <p>Desain estetis dan mengedepankan fungsionalitas ruang.</p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
@@ -245,11 +243,11 @@
                             <div class="icon">
                                 <img src="assets/img/harga-kompetitif.png" class="img-fluid" alt="">
                             </div>
-                            <a href="#" class="stretched-link">
+                            <div class="stretched-link">
                                 <h3>Harga Kompetitif</h3>
-                            </a>
-                            <p>Dengan harga yang dapat disesuaikan dengan budget,
-                                kami memastikan bahwa setiap orang bisa menikmati desain interior berkualitas tanpa perlu merogoh kocek terlalu dalam. </p>
+                            </div>
+                            <p>Harga kompetitif dengan tetap menjaga kualitas desain yang unggul.
+                            </p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
@@ -263,10 +261,10 @@
                             <div class="icon">
                                 <img src="assets/img/cs.png" class="img-fluid" alt="">
                             </div>
-                            <a href="#" class="stretched-link">
+                            <div class="stretched-link">
                                 <h3>Customer Service</h3>
-                            </a>
-                            <p>Jarak bukanlah halangan bagi kami untuk memberikan layanan terbaik kepada customers. Kami menawarkan pelayanan secara online maupun offline dengan respon cepat dan profesional.</p>
+                            </div>
+                            <p>Kami menyediakan layanan prima, baik online dan offline dengan respons cepat dan profesional.</p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
@@ -280,11 +278,11 @@
                             <div class="icon">
                                 <img src="assets/img/one-step-solution.png" class="img-fluid" alt="">
                             </div>
-                            <a href="#" class="stretched-link">
+                            <div class="stretched-link">
                                 <h3>One Stop Solution</h3>
-                            </a>
-                            <p>Kamu tidak perlu repot mencari berbagai penyedia jasa, karena Baron Living Studio menyediakan semua kebutuhan desain dan bangun dalam satu tempat.</p>
-                            <a href="#" class="stretched-link"></a>
+                            </div>
+                            <p>Baron Living Studio memenuhi semua kebutuhan desain dan bangun dalam satu tempat.</p>
+                            <div class="stretched-link"></div>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
