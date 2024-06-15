@@ -151,7 +151,7 @@
                     Cukup ceritakan desain impianmu dan tim kami akan bekerja untuk merealisasikannya.
                 </p>
                 <center class="mt-5" data-aos="fade-right">
-                    <p><a class="btn-cta" href="https://bit.ly/ChatBaronLiving">Ceritakan Idemu </a></p>
+                    <p><a class="btn-cta" href="https://bit.ly/BaronLivingStudio">Ceritakan Idemu </a></p>
                 </center>
             </div>
             <!-- <hr> -->
@@ -198,7 +198,7 @@
                 <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first" data-aos="fade-right">
                     <h3>Konsultasi <em>Gratis</em></h3>
                     <p>Ceritakan setiap ide dan harapanmu dan dapatkan solusi terbaik secara cuma - cuma dari tim arsitek berpengalaman.</p>
-                    <a class="btn-cta align-self-start" href="https://bit.ly/ChatBaronLiving">Coba Sekarang</a>
+                    <a class="btn-cta align-self-start" href="https://bit.ly/BaronLivingStudio">Coba Sekarang</a>
                 </div>
 
                 <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center" data-aos="fade-left">
@@ -429,6 +429,9 @@
             <div class="section-header text-border">
                 <h2>Teman Perjalananmu</h2>
                 <p>Baron Living Studio bukan sekadar jasa desain interior. Kami bersedia menjadi mitra dan teman perjalananmu dalam mewujudkan ruang ideal sesuai keinginan. Dengan komunikasi yang terbuka dan informatif, kami akan mendengarkan setiap kebutuhan dan ide-ide unikmu.</p>
+                <center class="mt-4 mb-3" data-aos="fade-right">
+                    <p><a class="btn-cta" href="https://bit.ly/BaronLivingStudio">Hubungi Kami </a></p>
+                </center>
             </div>
         </div>
     </section><!-- End Services Section -->

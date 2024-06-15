@@ -109,8 +109,13 @@
             include_once 'footer.php';
             ?>
         </main>
-        <div class="scroll-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></div>
-        <img src="<?= base_url('assets'); ?>/img/wa.png" class="img-fluid btn-wa-fixed" alt="">
+
+        <div class="scroll-top d-flex align-items-center justify-content-center active">
+            <i class="bi bi-arrow-up-short"></i>
+        </div>
+        <a href="https://bit.ly/BaronLivingStudio">
+            <img src="<?= base_url('assets'); ?>/img/wa.png" class="img-fluid btn-wa-fixed" alt="">
+        </a>
     <?php
     }
     ?>
