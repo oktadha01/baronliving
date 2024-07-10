@@ -147,7 +147,8 @@
                     Bersama Baron Living Studio
                 </h2>
                 <p class="text-dark" data-aos="fade-left">
-                    Baron Living Studio Membantumu mewujudkan ruangan yang nyaman, fungsional, dan estetis untuk beristirahat, bekerja, serta menikmati kehidupan.
+                    Baron Living Studio Membantumu mewujudkan ruangan yang nyaman, fungsional, dan estetis untuk
+                    beristirahat, bekerja, serta menikmati kehidupan.
                     Cukup ceritakan desain impianmu dan tim kami akan bekerja untuk merealisasikannya.
                 </p>
                 <center class="mt-5" data-aos="fade-right">
@@ -197,8 +198,9 @@
             <div class="row g-5">
                 <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first" data-aos="fade-right">
                     <h3>Konsultasi <em>Gratis</em></h3>
-                    <p>Ceritakan setiap ide dan harapanmu dan dapatkan solusi terbaik secara cuma - cuma dari tim arsitek berpengalaman.</p>
-                    <a class="btn-cta align-self-start" href="https://bit.ly/BaronLivingStudio">Coba Sekarang</a>
+                    <p>Ceritakan setiap ide dan harapanmu dan dapatkan solusi terbaik secara cuma - cuma dari tim
+                        arsitek berpengalaman.</p>
+                    <a class="btn-cta align-self-start" href="https://bit.ly/BARONLIVING">Coba Sekarang</a>
                 </div>
 
                 <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center" data-aos="fade-left">
@@ -264,7 +266,8 @@
                             <div class="stretched-link">
                                 <h3>Customer Service</h3>
                             </div>
-                            <p>Kami menyediakan layanan prima, baik online dan offline dengan respons cepat dan profesional.</p>
+                            <p>Kami menyediakan layanan prima, baik online dan offline dengan respons cepat dan
+                                profesional.</p>
                         </div>
                     </div>
                 </div><!-- End Service Item -->
@@ -463,7 +466,7 @@
                                     <h3>Harga Lemari</h3>
                                 </div>
                                 <div class="stretched-link">
-                                <p> Anda bisa menentukan ukuran sendiri untuk mengetahui estimasi harga</p>
+                                    <p> Anda bisa menentukan ukuran sendiri untuk mengetahui estimasi harga</p>
                                 </div>
                             </div>
                         </div>
@@ -513,9 +516,11 @@
         <div class="container pt-5rem">
             <div class="section-header text-border">
                 <h2>Teman Perjalananmu</h2>
-                <p>Baron Living Studio bukan sekadar jasa desain interior. Kami bersedia menjadi mitra dan teman perjalananmu dalam mewujudkan ruang ideal sesuai keinginan. Dengan komunikasi yang terbuka dan informatif, kami akan mendengarkan setiap kebutuhan dan ide-ide unikmu.</p>
+                <p>Baron Living Studio bukan sekadar jasa desain interior. Kami bersedia menjadi mitra dan teman
+                    perjalananmu dalam mewujudkan ruang ideal sesuai keinginan. Dengan komunikasi yang terbuka dan
+                    informatif, kami akan mendengarkan setiap kebutuhan dan ide-ide unikmu.</p>
                 <center class="mt-4 mb-3" data-aos="fade-right">
-                    <p><a class="btn-cta" href="https://bit.ly/BaronLivingStudio">Hubungi Kami </a></p>
+                    <p><a class="btn-cta" href="https://bit.ly/BARONLIVING">Hubungi Kami </a></p>
                 </center>
             </div>
         </div>

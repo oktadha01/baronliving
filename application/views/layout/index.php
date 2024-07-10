@@ -24,35 +24,36 @@
     <?php
     if (isset($_metafoto)) {
     ?>
-        <meta property="og:image" content="<?php echo $_metafoto; ?>">
+    <meta property="og:image" content="<?php echo $_metafoto; ?>">
     <?php
     } else { ?>
-        <meta property="og:image" content="<?php echo base_url('assets'); ?>/img/bls-logo.png">
+    <meta property="og:image" content="<?php echo base_url('assets'); ?>/img/bls-logo.png">
     <?php
     }
     ?>
     <?php
     if (isset($_description)) {
     ?>
-        <meta name="description" content="<?php echo $_description; ?>">
-        <meta name="keywords" content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
+    <meta name="description" content="<?php echo $_description; ?>">
+    <meta name="keywords" content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
     <?php
     } else {
     ?>
-        <meta name="description" content="One Stop Solution untuk semua kebutuhan Interiormu, Merencanakan, merancang, melakukan konstruksi, dan custom furnitur Membantumu mewujudkan ruangan yang nyaman, Membantumu mewujudkan ruangan yang nyaman">
-        <meta name="keywords" content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
+    <meta name="description"
+        content="One Stop Solution untuk semua kebutuhan Interiormu, Merencanakan, merancang, melakukan konstruksi, dan custom furnitur Membantumu mewujudkan ruangan yang nyaman, Membantumu mewujudkan ruangan yang nyaman">
+    <meta name="keywords" content="Jasa desain arsitektur, interior, dan kontraktor berkualitas dan terpercaya">
     <?php } ?>
     <meta name="robots" content="INDEX,FOLLOW">
 
     <style>
-        .opacity-body {
-            margin-top: 0;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            z-index: 999;
-            background: #0000008c;
-        }
+    .opacity-body {
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 999;
+        background: #0000008c;
+    }
     </style>
 
     <!-- Favicons -->
@@ -62,7 +63,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Chathura" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -92,42 +95,44 @@
     if (isset($_view_login) && !empty($_view_login)) {
         $this->load->view($_view_login);
         } else {
-            
+
             ?>
-        <?php
+    <?php
         include_once 'navbar.php';
         ?>
-        <!-- <img src="https://wallpapercave.com/wp/wp9376859.jpg" alt=""> -->
-        <main id="page" class="ml-page">
+    <!-- <img src="https://wallpapercave.com/wp/wp9376859.jpg" alt=""> -->
+    <main id="page" class="ml-page">
 
-            <?php
+        <?php
             if (isset($_view) && !empty($_view)) {
                 $this->load->view($_view);
             }
             ?>
 
-            <?php
+        <?php
             include_once 'footer.php';
             ?>
-        </main>
+    </main>
 
-        <div class="scroll-top d-flex align-items-center justify-content-center active">
-            <i class="bi bi-arrow-up-short"></i>
-        </div>
-        <a href="https://bit.ly/BaronLivingStudio">
-            <img src="<?= base_url('assets'); ?>/img/wa.png" class="img-fluid btn-wa-fixed" alt="">
-        </a>
+    <div class="scroll-top d-flex align-items-center justify-content-center active">
+        <i class="bi bi-arrow-up-short"></i>
+    </div>
+    <a href="https://bit.ly/BARONLIVING">
+        <img src="<?= base_url('assets'); ?>/img/wa.png" class="img-fluid btn-wa-fixed" alt="">
+    </a>
     <?php
     }
     ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.6.6/summernote.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="<?php echo base_url('assets'); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <script>
-        new YouTubeToHtml5();
+    new YouTubeToHtml5();
     </script>
 
 
@@ -149,86 +154,86 @@
         $this->load->view($_script);
     } ?>
     <?php if (!$this->session->userdata('is_login')) : ?>
-        <script>
-            // alert('ya');
-            $('#page').removeClass('ml-page');
-        </script>
+    <script>
+    // alert('ya');
+    $('#page').removeClass('ml-page');
+    </script>
     <?php endif ?>
 
     <script>
-        $(document).ready(function() {
-            var newURL = location.href.split("#")[0];
-            window.history.pushState('object', document.title, newURL);
+    $(document).ready(function() {
+        var newURL = location.href.split("#")[0];
+        window.history.pushState('object', document.title, newURL);
 
-            $('.scroll-top').click(function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                })
+        $('.scroll-top').click(function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             })
+        })
+    });
+
+    function footerToggle(footerBtn) {
+        $(footerBtn).toggleClass("btnActive");
+        $(footerBtn).next().toggleClass("active");
+    }
+    $(document).on("click", ".pilih-foto", function() {
+        var file = $(this).parents().find(".file-foto");
+        file.trigger("click");
+    });
+
+
+    $(".sidebar-menu").hover(function() {
+        // alert('ya');
+        openNav();
+    }, function() {
+        closeNav();
+    });
+
+    function openNav() {
+        document.getElementById("page").style.marginLeft = "226px";
+    }
+
+    function closeNav() {
+        document.getElementById("page").style.marginLeft = "74px";
+    }
+    $(function() {
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+
+        // passes on every "a" tag
+        $("#navbar a").each(function() {
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).closest(".sidebar__nav__link").addClass("sidebar-active");
+            }
         });
+    });
 
-        function footerToggle(footerBtn) {
-            $(footerBtn).toggleClass("btnActive");
-            $(footerBtn).next().toggleClass("active");
-        }
-        $(document).on("click", ".pilih-foto", function() {
-            var file = $(this).parents().find(".file-foto");
-            file.trigger("click");
+    $(function() {
+        var url = window.location.href;
+
+        // passes on every "a" tag
+        $("#tag a").each(function() {
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).closest(".btn-tag").addClass("tag-active");
+            }
         });
+        // this will get the full URL at the address bar
+    });
+    $(function() {
+        var url = window.location.href;
 
-
-        $(".sidebar-menu").hover(function() {
-            // alert('ya'); 
-            openNav();
-        }, function() {
-            closeNav();
+        // passes on every "a" tag
+        $("#service a").each(function() {
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).closest(".btn-service").addClass("service-active");
+            }
         });
-
-        function openNav() {
-            document.getElementById("page").style.marginLeft = "226px";
-        }
-
-        function closeNav() {
-            document.getElementById("page").style.marginLeft = "74px";
-        }
-        $(function() {
-            // this will get the full URL at the address bar
-            var url = window.location.href;
-
-            // passes on every "a" tag
-            $("#navbar a").each(function() {
-                // checks if its the same on the address bar
-                if (url == (this.href)) {
-                    $(this).closest(".sidebar__nav__link").addClass("sidebar-active");
-                }
-            });
-        });
-
-        $(function() {
-            var url = window.location.href;
-
-            // passes on every "a" tag
-            $("#tag a").each(function() {
-                // checks if its the same on the address bar
-                if (url == (this.href)) {
-                    $(this).closest(".btn-tag").addClass("tag-active");
-                }
-            });
-            // this will get the full URL at the address bar
-        });
-        $(function() {
-            var url = window.location.href;
-
-            // passes on every "a" tag
-            $("#service a").each(function() {
-                // checks if its the same on the address bar
-                if (url == (this.href)) {
-                    $(this).closest(".btn-service").addClass("service-active");
-                }
-            });
-            // this will get the full URL at the address bar
-        });
+        // this will get the full URL at the address bar
+    });
     </script>
 </body>
 
