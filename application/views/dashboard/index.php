@@ -305,9 +305,9 @@
                     <?php if ($data->tittle_service == 'Arsitektur') { ?>
                         <?php
                         $id_arsitek = $data->id_service;
-                        $service = "(SELECT * FROM project, project_service, foto Where 
-                        project_service.tittle_project = project.project_id 
-                        AND foto.id_foto_service = project_service.id_project 
+                        $service = "(SELECT * FROM project, project_service, foto Where
+                        project_service.tittle_project = project.project_id
+                        AND foto.id_foto_service = project_service.id_project
                         AND project_service.id_service_project = " . $id_arsitek . " ORDER BY RAND() LIMIT 1)";
                         $query = $this->db->query($service);
                         foreach ($query->result() as $rows) {
@@ -337,9 +337,9 @@
                         <?php if ($data->tittle_service == 'Desain Interior') { ?>
                             <?php
                             $id_interior = $data->id_service;
-                            $service = "(SELECT * FROM project, project_service, foto Where 
-                        project_service.tittle_project = project.project_id 
-                        AND foto.id_foto_service = project_service.id_project 
+                            $service = "(SELECT * FROM project, project_service, foto Where
+                        project_service.tittle_project = project.project_id
+                        AND foto.id_foto_service = project_service.id_project
                         AND project_service.id_service_project = " . $id_interior . " ORDER BY RAND() LIMIT 1)";
                             $query = $this->db->query($service);
                             foreach ($query->result() as $rows) {
@@ -365,9 +365,9 @@
                         <?php if ($data->tittle_service == 'Custom Furnitur') { ?>
                             <?php
                             $id_furnitur = $data->id_service;
-                            $service = "(SELECT * FROM project, project_service, foto Where 
-                        project_service.tittle_project = project.project_id 
-                        AND foto.id_foto_service = project_service.id_project 
+                            $service = "(SELECT * FROM project, project_service, foto Where
+                        project_service.tittle_project = project.project_id
+                        AND foto.id_foto_service = project_service.id_project
                         AND project_service.id_service_project = " . $id_furnitur . " ORDER BY RAND() LIMIT 1)";
                             $query = $this->db->query($service);
                             foreach ($query->result() as $rows) {
@@ -397,9 +397,9 @@
                         <?php if ($data->tittle_service == 'Kontraktor') { ?>
                             <?php
                             $id_kontraktor = $data->id_service;
-                            $service = "(SELECT * FROM project, project_service, foto Where 
-                        project_service.tittle_project = project.project_id 
-                        AND foto.id_foto_service = project_service.id_project 
+                            $service = "(SELECT * FROM project, project_service, foto Where
+                        project_service.tittle_project = project.project_id
+                        AND foto.id_foto_service = project_service.id_project
                         AND project_service.id_service_project = " . $id_kontraktor . " ORDER BY RAND() LIMIT 1)";
                             $query = $this->db->query($service);
                             foreach ($query->result() as $rows) {
@@ -421,6 +421,93 @@
                         <?php } ?>
                     <?php } ?>
                 </div>
+            </div>
+        </div>
+        <div class="container services pt-5rem" data-aos="fade-up">
+            <div class="section-header p-0">
+                <h2>Hitung Estimasi Biaya Disini</h2>
+            </div>
+            <div class="row gy-5">
+                <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="<?php echo site_url('Kalkulate_estimasi/kitchen_set'); ?> " style="text-decoration: none;">
+                        <div class="service-item">
+                            <div class="img">
+                                <img src="assets/img/kitchen.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="details position-relative">
+                                <div class="icon">
+                                    <img src="assets/img/desain-berkualitas.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="stretched-link">
+                                    <h3>Harga Kitchen Set</h3>
+                                </div>
+                                <div class="stretched-link">
+                                    <p> Anda bisa menentukan ukuran sendiri untuk mengetahui estimasi harga</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Service Item -->
+
+                <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="<?php echo site_url('Kalkulate_estimasi/lemari'); ?> " style="text-decoration: none;">
+                        <div class="service-item">
+                            <div class="img">
+                                <img src="assets/img/lemari.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="details position-relative">
+                                <div class="icon">
+                                    <img src="assets/img/Custom Furnitur.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="stretched-link">
+                                    <h3>Harga Lemari</h3>
+                                </div>
+                                <div class="stretched-link">
+                                <p> Anda bisa menentukan ukuran sendiri untuk mengetahui estimasi harga</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Service Item -->
+
+                <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-item">
+                        <div class="img">
+                            <img src="assets/img/desain-berkualitas.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="details position-relative">
+                            <div class="icon">
+                                <img src="assets/img/Arsitektur.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="stretched-link">
+                                <h3>Custom Ruang Tamu</h3>
+                            </div>
+                            <div class="stretched-link">
+                                <p> Anda bisa menentukan ukuran sendiri untuk mengetahui estimasi harga</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="service-item">
+                        <div class="img">
+                            <img src="assets/img/one-step-solution.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="details position-relative">
+                            <div class="icon">
+                                <img src="assets/img/Desain Interior.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="stretched-link">
+                                <h3>Harga Sofa</h3>
+                            </div>
+                            <div class="stretched-link">
+                                <p> Anda bisa menentukan ukuran sendiri untuk mengetahui estimasi harga</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
             </div>
         </div>
         <div class="container pt-5rem">
