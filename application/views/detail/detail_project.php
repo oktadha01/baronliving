@@ -5,7 +5,7 @@
     }
 </style>
 <main id="main" class="mt-4">
-    <section id="" class="portfolio" style="position: fixed;width: -webkit-fill-available;z-index: 63; background: white;padding-bottom: 1px;">
+    <section id="portfolio" class="portfolio" style="position: fixed;width: -webkit-fill-available;z-index: 63; background: white;padding-bottom: 1px;">
         <div class="breadcrumbs mt-0">
             <div class="container">
 
@@ -35,7 +35,7 @@
     foreach ($detail_project as $row) {
         $idservice = $row->id_service;
     ?>
-        <section id="portfolio-details" class="portfolio-details pb-0">
+        <section id="portfolio" class="portfolio-details pb-0">
             <div class="container aos-init aos-animate" data-aos="fade-up">
                 <div class="row gy-4">
                     <div class="col-lg-8">
@@ -83,5 +83,4 @@
     <?php
     }
     ?>
-    </section>
 </main>

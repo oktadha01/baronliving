@@ -1,23 +1,23 @@
-<header id="header" class="header fixed-top" data-scrollto-offset="0" style="max-height: 67px !important;">
+<header id="header" class="header fixed-top sticked" data-scrollto-offset="0" style="max-height: 67px !important;">
    <div class="container-fluid d-flex align-items-center justify-content-between pr-var">
 
-      <a href="#" class="logo d-flex align-items-center scrollto me-auto mr-0">
-         <i class="fa-brands fa-instagram" style="color: #00000085;font-size: 35px;"></i>
+      <a href="<?= base_url(); ?>" class="logo d-flex align-items-center scrollto me-auto mr-0">
+         <img src="<?php echo base_url('assets'); ?>/img/bls-logo.png" alt="">
       </a>
       <a href="<?php echo base_url('dashboard'); ?>" class="logo d-flex align-items-center scrollto me-auto mr-0">
          <!-- Uncomment the line below if you also wish to use an image logo -->
          <!-- <img src="assets/img/logo.png" alt=""> -->
-         <h1 class="mb-0 font-size-nav-baro"> Baron Living Studio<span>.</span></h1>
+         <h1 class="mb-0 font-size-nav-baro"> Baron Living Studio</h1>
       </a>
 
       <nav id="navbar" class="navbar">
          <ul>
             <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#home">Home</a></li>
-            <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#about">About</a></li>
-            <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#services">Services</a></li>
+            <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#about">Tentang Kami</a></li>
+            <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#services">Layanan</a></li>
             <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#portfolio">Portfolio</a></li>
             <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#Artikel">Artikel</a></li>
-            <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="<?php echo base_url(); ?>#contact">Kontak</a></li>
          </ul>
          <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->

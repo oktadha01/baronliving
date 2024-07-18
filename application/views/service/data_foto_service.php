@@ -18,8 +18,9 @@
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <label class="" for="tittle">Tittle</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Tittle ..." id="tittle-foto-service" required>
+                <div class="form-group">
+                    <select id="select-title" class="form-control" multiple>
+                    </select>
                 </div>
             </div>
         </div>
@@ -82,14 +83,20 @@
                         <img src="<?php echo base_url('upload'); ?>/service/<?php echo $data->foto_service; ?>" class="img-fluid" alt="">
                     </div>
                     <div class="table-row__info">
-                        <p class="table-row__name"><?php echo $data->tittle_foto_service; ?></p>
+                        <?php
+                        $titles = explode(',', $data->tittle_foto_service);
+                        foreach ($titles as $title) {
+                            $title = trim($title); // Remove any leading/trailing whitespace
+                        ?>
+                            <p class="table-row__name"><?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?></p>
+                        <?php } ?>
                     </div>
                 </td>
                 <td class="table-row__td">
                     <?php echo $data->orientasi_foto; ?>
                 </td>
                 <td class="row-td-action">
-                    <a href="#" class="btn-edit" data-id-foto="<?php echo $data->id_foto; ?>" data-id-foto-service="<?php echo $data->id_foto_service; ?>" data-foto-service="<?php echo $data->foto_service; ?>" data-tittle="<?php echo $data->tittle_foto_service; ?>" data-orientasi="<?php echo $data->orientasi_foto; ?>">
+                    <a href="#form-add-foto" class="btn-edit" data-id-foto="<?php echo $data->id_foto; ?>" data-id-foto-service="<?php echo $data->id_foto_service; ?>" data-foto-service="<?php echo $data->foto_service; ?>" data-tittle="<?php echo $data->tittle_foto_service; ?>" data-select-title="<?= $data->tittle_foto_service; ?>" data-orientasi="<?php echo $data->orientasi_foto; ?>">
                         <i class="fa-solid fa-pen"></i>
                     </a>
                     <a href="#" class="btn-delete" data-id-foto="<?php echo $data->id_foto; ?>" data-foto-service="<?php echo $data->foto_service; ?>">
@@ -102,6 +109,13 @@
         ?>
     </tbody>
 </table>
+<label>Multiple Select2</label>
+<select id="multiple" class="js-states form-control" multiple>
+    <option>Java</option>
+    <option>Javascript</option>
+    <option>PHP</option>
+    <option>Visual Basic</option>
+</select>
 <script>
     $(document).ready(function() {
         $('.ceklis-orientasi-foto').click(function(e) {
@@ -126,6 +140,10 @@
         });
     })
     $('.btn-edit').click(function() {
+        let selectTitle = $(this).data('select-title');
+        let titleArray = selectTitle.split(','); // Convert string to array
+
+        $('#select-title').val(titleArray).change();
         $('#btn-save-foto').val('edit')
         $('#btn-save-foto, #btn-cencel, #ceklis-ubah-foto').show();
         $('#btn-add-foto').hide();
@@ -137,7 +155,6 @@
         $('#preview-foto-service').attr({
             src: "<?php echo base_url('upload'); ?>/service/" + $(this).data('foto-service')
         });
-        $("#tittle-foto-service").val($(this).data('tittle'));
         $("#id-foto").val($(this).data('id-foto'));
         $("#id-project").val($(this).data('id-foto-service'));
         $("#orientasi-foto").val($(this).data('orientasi'));
@@ -169,13 +186,13 @@
         }
     });
     $('#btn-save-foto').click(function() {
-
+        // alert($('#select-title').val())
         const foto_service = $('#foto-service').prop('files')[0];
         let formData = new FormData();
         formData.append('id-foto', $('#id-foto').val());
         formData.append('id-service', $("#id-project").val());
         formData.append('foto-service', foto_service);
-        formData.append('tittle-foto-service', $('#tittle-foto-service').val());
+        formData.append('tittle-foto-service', $('#select-title').val());
         formData.append('orientasi-foto', $('#orientasi-foto').val());
         formData.append('foto-lama', $('#foto-lama').val());
         formData.append('action-foto', $('#ceklis-ubah-foto-service').val());
@@ -255,6 +272,60 @@
             });
         }
     });
+    load_select_title();
+    $(document).ready(function() {
+        $('#select-title').change(function() {
+            let selectedValues = $(this).val();
+
+            // Check if 'add' is one of the selected values
+            if (selectedValues.includes('add')) {
+                // Remove 'add' from selected values temporarily
+                selectedValues = selectedValues.filter(value => value !== 'add');
+
+                // Prompt the user for a new option value
+                let newOptionValue = prompt("Enter new option value (or press Cancel to abort):");
+                if (newOptionValue !== null && newOptionValue !== "") { // User did not press Cancel and provided a non-empty value
+                    // Add the new option to the select element
+                    $('#select-title').append(new Option(newOptionValue, newOptionValue));
+                    // Add the new option to the selected values
+                    selectedValues.push(newOptionValue);
+                }
+
+                // Set the filtered values back to the select element
+                $(this).val(selectedValues);
+            }
+
+            // Alert all selected values (if needed)
+            alert(selectedValues.join(', '));
+        });
+    });
+
+
+
+
+
+
+
+    function load_select_title() {
+        // let formData = new FormData();
+        // formData.append('id-service', $("#id-project").val());
+
+        $.ajax({
+            // type: 'POST',
+            url: "<?php echo site_url('Service/select_title_interior'); ?>",
+            // data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function(data) {
+                $('#select-title').html(data);
+            },
+            error: function() {
+                alert("Data Gagal Diupload");
+            }
+        });
+
+    }
 
     function load_data_foto() {
         let formData = new FormData();
@@ -282,10 +353,18 @@
         $('#preview-foto-service').attr({
             src: "<?php echo base_url('assets'); ?>/img/80x80.png"
         });
-        $("#tittle-foto-service").val('');
+        $("#select-title").val('');
         $('#ceklis-ubah-foto-service').prop('checked', false);
         $("#orientasi-foto").val();
         $('.ceklis-orientasi-foto').prop('checked', false);
 
     }
+    $("#select-title").select2({
+        placeholder: "Pilih keterangan ...",
+        allowClear: true
+    });
+    $("#multiple").select2({
+        placeholder: "Pilih keterangan ...",
+        allowClear: true
+    });
 </script>

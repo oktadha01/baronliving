@@ -181,7 +181,7 @@
                                     <img src="<?php echo base_url('assets'); ?>/img/<?= $data->tittle_service; ?>.png" alt="" class="img-fluid">
                                     <!-- <i class="bi bi-person-workspace"></i> -->
                                 </div>
-                                <a href="<?php echo base_url(); ?>detail/data/<?php echo $tittle; ?>" class="stretched-link">
+                                <a href="<?php echo base_url(); ?>Layanan/jasa/<?php echo $tittle; ?>" class="stretched-link">
                                     <h3><?= $data->tittle_service; ?></h3>
                                 </a>
                                 <p class="font-title-service text-dark"><?= $data->desc; ?></p>

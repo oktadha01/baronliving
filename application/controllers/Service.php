@@ -3,6 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Service extends CI_Controller
 {
+    public $m_service;
+    public $load;
+    public $input;
+    public $upload;
+    public $image_lib;
+    public $uri;
+    public $db;
     function __construct()
     {
         parent::__construct();
@@ -27,6 +34,34 @@ class Service extends CI_Controller
         foreach ($data['select_project'] as $project) {
             echo '<option value="' . $project->project_id . '">' . $project->nm_project . '</option>';
         }
+    }
+    function select_title_interior()
+    {
+        $this->db->select('tittle_foto_service');
+        $this->db->from('foto');
+        $this->db->where("tittle_foto_service != ''");
+        // $this->db->group_by('tittle_foto_service');
+        $query = $this->db->get();
+        $results = $query->result();
+        $options = [];
+
+        foreach ($results as $row) {
+            $titles = explode(',', $row->tittle_foto_service);
+            foreach ($titles as $title) {
+                $title = trim($title); // Remove any leading/trailing whitespace
+                if (!empty($title)) {
+                    $options[] = $title;
+                }
+            }
+        }
+
+        $grouped = array_count_values($options);
+
+        echo '<option value=""></option>';
+        foreach ($grouped as $select_option => $count) {
+            echo '<option value="' . htmlspecialchars($select_option, ENT_QUOTES, 'UTF-8') . '">' . htmlspecialchars($select_option, ENT_QUOTES, 'UTF-8') . '</option>';
+        }
+        echo '<option value="add">Add description</option>';
     }
 
     function save_add_project()
@@ -209,7 +244,7 @@ class Service extends CI_Controller
     
             $.ajax({
                 type: "POST",
-                url: "'.site_url("Service/upload_foto_meta_service").'",
+                url: "' . site_url("Service/upload_foto_meta_service") . '",
                 data: formData,
                 cache: false,
                 processData: false,

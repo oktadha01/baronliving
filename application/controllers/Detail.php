@@ -21,7 +21,7 @@ class Detail extends CI_Controller
         if ($tittle == 'all') {
             $data['_title'] = 'All Project';
         } else {
-            $data['_title'] = $tittle;
+            $data['_title'] = 'Jasa ' . $tittle;
         }
         $data['_script'] = 'detail/detail_js';
         $data['_view'] = 'detail/detail';
