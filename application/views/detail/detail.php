@@ -46,57 +46,7 @@
             </div>
         </div>
     </section>
-    <!-- <section id="" class="services" style="position: fixed;width: -webkit-fill-available;z-index: 63; background: white;padding-bottom: 1px;">
-
-        <div class="breadcrumbs mt-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-12">
-
-                        <h2 style="color: #485664;">Layanan</h2>
-                        <div id="service" class="d-flex justify-content-between align-items-center">
-                            <ol>
-                                <?php
-                                foreach ($data_service as $data) :
-                                    $tittle_service = $data->tittle_service;
-                                    $tittle = preg_replace("![^a-z0-9]+!i", "-", $tittle_service);
-                                ?>
-                                    <li class="mt-2"><a id="btn-service-<?= $tittle; ?>" class="btn-service" href="<?php echo base_url(); ?>Layanan/jasa/<?= $tittle; ?>/<?= preg_replace("![^a-z0-9]+!i", "-", $lokasi); ?>"><?= $data->tittle_service; ?></a></li>
-                                <?php
-                                endforeach;
-                                ?>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <h2 style="color: #485664;">Konsep</h2>
-                        <ol>
-                            <?php
-
-                            $displayed_titles = []; // Initialize an array to keep track of displayed titles
-
-                            foreach ($konsep as $data) :
-                                $titles = explode(',', $data->data_konsep);
-                                foreach ($titles as $title) {
-                                    $title = trim($title); // Remove any leading/trailing whitespace
-                                    $sanitized_title = preg_replace("![^a-z0-9]+!i", "-", htmlspecialchars($title, ENT_QUOTES, 'UTF-8'));
-                                    if (!in_array($sanitized_title, $displayed_titles)) {
-
-                                        $displayed_titles[] = $sanitized_title; // Add title to displayed titles array
-                            ?>
-                                        <li class="mt-2"><a id="btn-konsep-<?= $sanitized_title; ?>" class="btn-service" href="<?php echo base_url(); ?>Layanan/jasa/<?= $this->uri->segment(3); ?>/konsep/<?= $sanitized_title; ?>/<?= preg_replace("![^a-z0-9]+!i", "-", $lokasi); ?>"><?= htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?></a></li>
-                            <?php
-                                    }
-                                }
-                            endforeach;
-                            ?>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+    
     <section id="services" class="p-service" data-aos="fade-up">
         <!-- <div class="container" > -->
         <div class="container">

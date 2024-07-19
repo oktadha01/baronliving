@@ -20,15 +20,19 @@
         }
 
     });
-    const elementId = 'btn-konsep-<?= $this->uri->segment(5); ?>';
-    const originalUrl = document.getElementById(elementId).href;
-    const urlParts = originalUrl.split('/');
+    
+    <?php if ($this->uri->segment(5) == 'layanan') { ?>
 
-    // Keep the segments up to 'Arsitektur'
-    const newUrl = urlParts.slice(0, 7).join('/') + '/<?= preg_replace("![^a-z0-9]+!i", "-", $lokasi); ?>';
+        const elementId = 'btn-konsep-<?= $this->uri->segment(5); ?>';
+        const originalUrl = document.getElementById(elementId).href;
+        const urlParts = originalUrl.split('/');
 
-    console.log(newUrl);
-    $('#' + elementId).attr('href', newUrl);
+        // Keep the segments up to 'Arsitektur'
+        const newUrl = urlParts.slice(0, 7).join('/') + '/<?= preg_replace("![^a-z0-9]+!i", "-", $lokasi); ?>';
+
+        console.log(newUrl);
+        $('#' + elementId).attr('href', newUrl);
+    <?php } ?>
 
     $(document).ready(function() {});
     $('.img').click(function() {
